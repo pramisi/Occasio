@@ -5,13 +5,44 @@
     box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+
 body
 {
     display:flex;
-    justify-content: center;
-    align-content: center;
+    padding:0;
+	margin:0;
     min-height:100vh;
     background: #dcdcdc;
+}
+
+.main-content{
+	width:1200px;
+	margin:0 auto;
+	text-align:center;
+
+}
+
+header{
+	text-align:center;
+	margin-bottom:20px;
+	color:dodgerblue;
+}
+
+.button{
+	margin-bottom:20px;
+	color:white;
+	background-color:purple;
+	border-radius:15px;
+	border:none;
+	padding:10px 20px;
+	font-size:16px;
+	cursor:pointer;
+	transition: background-color 0.3s ease;
+}
+
+.button:hover{
+	background-color:purple;
 }
 .container{
 	position:relative;
@@ -131,4 +162,149 @@ body
 }
 .container .card .content .price_rating .fa.grey{
 	color: #ccc;
+}
+
+footer{
+	text-align: center;
+	padding: 20px;
+	color: violet;
+	background-color: black;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: #181818 !important;
+    color: #f1f1f1 !important;
+}
+body.dark-mode .main-content,
+body.dark-mode .container,
+body.dark-mode .card {
+    background: #232323 !important;
+    color: #f1f1f1 !important;
+}
+body.dark-mode header {
+    color: #90caf9 !important;
+}
+body.dark-mode .button {
+    background-color: #333366 !important;
+    color: #fff !important;
+}
+body.dark-mode footer {
+    color: #aaa !important;
+}
+
+.occasio-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #8e24aa 30%, #3949ab 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 2px 2px 12px #b39ddb55;
+    margin-bottom: 0.2em;
+    display: inline-block;
+}
+
+.o-letter {
+    color: #fff;
+    background: linear-gradient(135deg, #8e24aa 60%, #3949ab 100%);
+    border-radius: 50%;
+    padding: 0.1em 0.45em;
+    margin-right: 0.1em;
+    box-shadow: 0 2px 12px #b39ddb88;
+    display: inline-block;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+
+
+.occasio-tagline {
+    font-size: 1.25rem;
+    color: #555;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+    font-style: italic;
+    text-shadow: 1px 1px 6px #e1bee733;
+}
+
+.about-card {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(60, 40, 120, 0.15), 0 1.5px 6px 0 rgba(60,40,120,0.08);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 950px;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.about-img img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px #b39ddb55;
+    background: #f3e5f5;
+    display: block;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6a1b9a;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.about-icon {
+    font-size: 1.5em;
+    margin-right: 0.2em;
+    background: linear-gradient(135deg, #8e24aa 60%, #3949ab 100%);
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    box-shadow: 0 2px 8px #b39ddb88;
+    display: inline-block;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.7rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .about-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        gap: 1.2rem;
+    }
+    .about-img img {
+        width: 120px;
+        height: 120px;
+    }
+    .about-content h3 {
+        text-align: center;
+        justify-content: center;
+    }
 }
