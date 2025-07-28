@@ -352,8 +352,8 @@ letter-spacing: 3px;
   
   /* footer */
   .footer-section {
-	background-color: #212934;
-	color: white;
+	background-color: silver;
+	color: black;
   }
   .footer-container {
 	display: flex;

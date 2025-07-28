@@ -8,11 +8,27 @@
 	<link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <body>
+
+
+	
+<div class="main-content">
+	
+  <header>
+  <h1 class="occasio-heading">
+    <span class="o-letter">O</span>ccasio
+  </h1>
+  <p class="occasio-tagline">Your one stop clothing destination</p>
+  <button id="darkModeToggle" class="button" style="position:absolute; top:20px; right:20px;">🌙 Dark Mode</button>
+</header>
+
+  <button class="button" onclick="location.href='contact.html'">Contact Us</button>
+
+
     <div class="container">
 		
 		<div class="card">
 			<div class="imgbx">
-				<img src="file:///C:/Users/HARIom/Pictures/web%20images/c2f5dde7f4384d21bfaf73805ea45396UR_w540_h720_q85.jpeg">
+				<img src="images\c2f5dde7f4384d21bfaf73805ea45396UR_w540_h720_q85.jpeg">
 				<ul class="action">
 					<li><i class="fa fa-heart" aria-hidden="true"></i>
 						<span>Add to Wishlist</span>
@@ -43,7 +59,7 @@
 		</div>
 		<div class="card">
 				<div class="imgbx">
-					<img src="file:///C:/Users/HARIom/Pictures/web%20images/afb7cf4c6bc04d82a61d39efad2393f5_w1000_q90.jpeg">
+					<img src="images\afb7cf4c6bc04d82a61d39efad2393f5_w1000_q90.jpeg">
 					<ul class="action">
 						<li><i class="fa fa-heart" aria-hidden="true"></i>
 							<span>Add to Wishlist</span>
@@ -76,7 +92,7 @@
 		</div>
 		<div class="card">
 			<div class="imgbx">
-				<img src="file:///C:/Users/HARIom/Pictures/web%20images/4d3f582270674ad4a75f1a832f5cc8b5_w1000_q90.jpeg">
+				<img src="images\4d3f582270674ad4a75f1a832f5cc8b5_w1000_q90.jpeg">
 				<ul class="action">
 					<li><i class="fa fa-heart" aria-hidden="true"></i>
 						<span>Add to Wishlist</span>
@@ -108,7 +124,7 @@
 		</div>
 		<div class="card">
 			<div class="imgbx">
-				<img src="file:///C:/Users/HARIom/Pictures/web%20images/232c81bdd7794e5a9ce2b19f94115bceUR_w1000_q90.jpeg">
+				<img src="images\232c81bdd7794e5a9ce2b19f94115bceUR_w1000_q90.jpeg">
 				<ul class="action">
 					<li><i class="fa fa-heart" aria-hidden="true"></i>
 						<span>Add to Wishlist</span>
@@ -142,7 +158,7 @@
 	
 	    <div class="card">
 		    <div class="imgbx">
-			    <img src="file:///C:/Users/HARIom/Pictures/web%20images/fd4a0fb293b1449b84d7addf7169a88a_w1000_q90.jpeg">
+			    <img src="images\fd4a0fb293b1449b84d7addf7169a88a_w1000_q90.jpeg">
 				<ul class="action">
 					<li><i class="fa fa-heart" aria-hidden="true"></i>
 						<span>Add to Wishlist</span>
@@ -175,7 +191,7 @@
         </div>
 		<div class="card">
 			<div class="imgbx">
-				<img src="file:///C:/Users/HARIom/Pictures/web%20images/3e2ce395df314cdd8ed66494b0fc1205_w1000_q90.jpeg">
+				<img src="images\3e2ce395df314cdd8ed66494b0fc1205_w1000_q90.jpeg">
 				<ul class="action">
 					<li><i class="fa fa-heart" aria-hidden="true"></i>
 						<span>Add to Wishlist</span>
@@ -208,7 +224,7 @@
 	</div>
 	<div class="card">
 		<div class="imgbx">
-			<img src="file:///C:/Users/HARIom/Pictures/web%20images/b2832474d61a47898af21fcb8cf3ba51UR_w1000_q90.jpeg">
+			<img src="images\b2832474d61a47898af21fcb8cf3ba51UR_w1000_q90.jpeg">
 			<ul class="action">
 				<li><i class="fa fa-heart" aria-hidden="true"></i>
 					<span>Add to Wishlist</span>
@@ -241,7 +257,7 @@
     </div>
 	<div class="card">
 		<div class="imgbx">
-			<img src="file:///C:/Users/HARIom/Pictures/web%20images/846e981f6ac343d5bb18cca5ed0272eeUR_w1000_q90.jpeg">
+			<img src="images\846e981f6ac343d5bb18cca5ed0272eeUR_w1000_q90.jpeg">
 			<ul class="action">
 				<li><i class="fa fa-heart" aria-hidden="true"></i>
 					<span>Add to Wishlist</span>
@@ -273,5 +289,42 @@
 		</div>
     </div> 
 </div>
+
+
+<div style="text-align:center; margin: 30px 0;">
+    <a href="page4.html" class="button">Next &rarr;</a>
+	</div>
+
+
+<footer>
+	<p>&copy; 2023 Occasio. All rights reserved.</p>
+	<p>Follow us on:
+		<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+		<a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+		<a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+	</p>
+	
+</footer>
 </div>
+
+<script>
+document.getElementById('darkModeToggle').onclick = function() {
+    document.body.classList.toggle('dark-mode');
+    
+    if(document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        this.textContent = '☀️ Light Mode';
+    } else {
+        localStorage.setItem('theme', 'light');
+        this.textContent = '🌙 Dark Mode';
+    }
+};
+
+window.onload = function() {
+    if(localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('darkModeToggle').textContent = '☀️ Light Mode';
+    }
+};
+</script>
 </body>
