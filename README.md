@@ -4,6 +4,8 @@
 Welcome to **Occasio**, where fashion isn't just about clothing — it's an expression of moments, moods, and milestones. We believe that **every occasion deserves its own style**, and we're here to help you dress the story you want to tell.
 
 ---
+# Live demo 
+[click here to view the website](https://pramisi.github.io/Occasio/)
 
 ## 🧾 Table of Contents
 - [About the Brand](#about-the-brand)
