@@ -112,5 +112,3 @@ git push origin feature/your-feature-name
 - Click **Create Pull Request**
 
 ---
-
-> **Occasio empowers you to dress not just for the day — but for the story you want to tell.**
