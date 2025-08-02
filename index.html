@@ -401,6 +401,190 @@
 </div>
 </div>
 
+<<<<<<< feature/categories_of_the_month
+<!-- ...existing code... -->
+<style>
+/* Categories of the Month Section Styles */
+.categories-section {
+  padding: 50px 0 30px 0;
+  background: #fff;
+}
+.categories-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.cards-flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px 48px;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.category-card {
+  background: #f8f8f8;
+  border-radius: 22px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  width: 320px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 24px 28px 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.category-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+}
+.category-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.category-content {
+  text-align: center;
+}
+.category-name {
+  font-size: 2.1em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+.shop-btn {
+  display: inline-block;
+  background: #ffd700;
+  color: #222;
+  font-size: 1.6em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  padding: 18px 48px;
+  border-radius: 36px;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.shop-btn:hover {
+  background: #222;
+  color: #ffd700;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+@media (max-width: 1100px) {
+  .cards-flex {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 32px 24px;
+  }
+  .category-card {
+	width: 44vw;
+	min-width: 220px;
+	padding: 28px 12px 20px 12px;
+  }
+}
+@media (max-width: 700px) {
+  .categories-title {
+	font-size: 1.3em;
+	margin-bottom: 18px;
+  }
+  .cards-flex {
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(6, 1fr);
+	gap: 18px 0;
+  }
+  .category-card {
+	width: 90vw;
+	min-width: 120px;
+	padding: 14px 4px 10px 4px;
+	min-height: 180px;
+  }
+  .category-img {
+	width: 70px;
+	height: 70px;
+	margin-bottom: 10px;
+  }
+  .category-name {
+	font-size: 1.2em;
+	margin-bottom: 8px;
+  }
+  .shop-btn {
+	font-size: 1em;
+	padding: 8px 18px;
+  }
+}
+</style>
+=======
+<!-- footer -->
+
+<footer class="footer-section enhanced-footer">
+  <div class="footer-brand">
+	<h1>Occasio</h1>
+	<p class="tagline">Your style, your story.</p>
+  </div>
+  <div class="footer-main">
+	<div class="footer-column">
+	  <h2>Filter by Occasion</h2>
+	  <form class="occasion-filter">
+		<label><input type="checkbox" name="occasion" value="party"> Party Wear</label><br>
+		<label><input type="checkbox" name="occasion" value="casual"> Casual</label><br>
+		<label><input type="checkbox" name="occasion" value="formal"> Formal</label>
+	  </form>
+	</div>
+	<div class="footer-column">
+	  <h2>Products</h2>
+	  <ul class="footer-links">
+		<li><a href="page3.html">Tops</a></li>
+		<li><a href="page2.html">Pants</a></li>
+		<li><a href="page1.html">Party Wear</a></li>
+		<li><a href="page5.html">Accessories</a></li>
+		<li><a href="page4.html">Winter Wear</a></li>
+		<li><a href="page6.html">Boots</a></li>
+	  </ul>
+	</div>
+	<div class="footer-column">
+	  <h2>Info</h2>
+	  <ul class="footer-links">
+		<li><a href="e-commerce.html">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="#">FAQs</a></li>
+	  </ul>
+	</div>
+	<div class="footer-column">
+	  <h2>Contact</h2>
+	  <ul class="contact-info">
+		<li><i class="fa fa-envelope"></i> <a href="mailto:info@occasio.com">info@occasio.com</a></li>
+		<li><i class="fa fa-phone"></i> <a href="tel:+1234567890">+1 234 567 890</a></li>
+		<li class="social-icons">
+		  <div class="social-icons">
+			<a href="#"><i class="fa fa-facebook-square"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-pinterest"></i></a>
+		  </div>
+		</li>
+	  </ul>
+	</div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+	<p>&copy; 2025 Occasio. All rights reserved.</p>
+  </div>
+</footer>
+>>>>>>> main
 <!-- footer -->
 <footer class="footer-section">
 	<div class="footer-container">
