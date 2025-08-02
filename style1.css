@@ -45,20 +45,35 @@ html{
 	border-radius:10px;
 	padding: 1rem 3rem;
 }
-.icons div{
-	font-size: 2rem;
-	margin-left: 1rem;
-	color:black;
-	cursor:pointer;
 
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.icons div:hover{
-	background-color:var(--maincolor);
-	color:white;
-	border-radius:10px;
-	padding: 1rem 3rem;
 
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
+
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+body.dark-mode #theme-toggle {
+  background-color: #ddd;
+  color: black;
+}
+
 #menu-bar{
 	display:none;
 }
@@ -389,29 +404,6 @@ letter-spacing: 3px;
   .menu > h2 {
 	margin-bottom: 2rem;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width:768px){
 	html{

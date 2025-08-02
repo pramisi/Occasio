@@ -13,19 +13,15 @@
 		<nav class="navbar">
 			<a href="e-commerce.html">Home</a>
 			<a href="#">About</a>
-			<a href="#">Contact</a>
+			<a href="#Products">Products</a>
+			<a href="contact.html">Contact</a>
 			
 		</nav>
-		<div class="icons">
-			<div class="fa-regular fa-bars" id="menu-bar"></div>
-			<div class="fas fa-shopping-cart" id="shop-cart"></div>
-			<div class="fas fa-search" id="search-bar"></div>
-		
+
+		<div>
+			<button id="theme-toggle" class="button" style="position:absolute; top:20px; right:20px;">Enable Dark Mode</button>
 		</div>
-		<div class="search-box">
-			<input type="search" placeholder="search here">
-		</div>
-			
+            
 
 	</header>
    <div class="main-background">
@@ -117,8 +113,8 @@
 		  
 	</div>
 </section>
-<div class="heading">
-<h1 align="center"><b>Featured products</b></h1>
+<div class="heading" id="Products">
+<h1 text-align="center"><b>Featured products</b></h1>
 </div>
 <div class="name">
 	<div class="container">
@@ -450,6 +446,21 @@
   </div>
 </footer>
 
+<<<<<<< HEAD
+<script>
+  const toggleButton = document.getElementById('theme-toggle');
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      toggleButton.textContent = 'Disable Dark Mode';
+    } else {
+      toggleButton.textContent = 'Enable Dark Mode';
+    }
+  });
+
+</script>
+=======
 <!-- Enhanced Footer Styles -->
 <style>
   .enhanced-footer {
@@ -569,6 +580,7 @@
   }
 </style>
 
+>>>>>>> 7b03dcbe7ca1fe33129fc2aabfc3db4bb48b4f0b
 
 </body>
 </html>
