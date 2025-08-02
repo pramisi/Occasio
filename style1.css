@@ -56,6 +56,7 @@ html{
 	border-radius:10px;
 	padding: 1rem 3rem;
 }
+ main
 .icons div{
 	font-size: 2rem;
 	margin-left: 1rem;
@@ -63,14 +64,63 @@ html{
 	cursor:pointer;
 	gap:12px;
 
+ main
+
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+ main
 .icons div:hover{
 	background-color:var(--accentcolor);
 	color:white;
 	border-radius:10px;
 	padding: 1rem 3rem;
+=======
+ main
 
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
+
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+body.dark-mode #theme-toggle {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Enhanced Dark Mode Styles */
+body.dark-mode .header {
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .header #logo {
+  color: #ffffff !important;
+}
+
+body.dark-mode .navbar a {
+  color: #ffffff !important;
+}
+
+body.dark-mode .navbar a:hover {
+  background-color: #333 !important;
+  color: #ffffff !important;
+}
+
 #menu-bar{
 	display:none;
 }
@@ -445,6 +495,7 @@ letter-spacing: 3px;
 	margin-bottom: 2rem;
   }
 
+ main
 /* Back to Top Button */
     #backToTop {
       position: fixed;
@@ -484,6 +535,8 @@ letter-spacing: 3px;
 
 
 
+
+ main
 @media (max-width:768px){
 	html{
 		font-size:50%;
