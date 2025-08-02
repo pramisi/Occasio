@@ -52,7 +52,14 @@ html{
 	cursor:pointer;
 
 }
-.icons div:hover{
+.icons a{
+	font-size: 2rem;
+	margin-left: 1rem;
+	color:black;
+	cursor:pointer;
+	text-decoration: none;
+}
+.icons div:hover, .icons a:hover{
 	background-color:var(--maincolor);
 	color:white;
 	border-radius:10px;

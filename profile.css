@@ -1,0 +1,901 @@
+/* Profile Page Styles */
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px; /* Add top margin to account for fixed header */
+    padding: 2rem 1rem;
+    display: block; /* Change from grid to block layout */
+    min-height: calc(100vh - 200px);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sidebar Styles */
+.profile-sidebar {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    height: calc(100vh - 140px); /* Fixed height based on viewport */
+    position: fixed; /* Make sidebar fixed */
+    width: 300px; /* Fixed width */
+    top: 120px; /* Position from top */
+    left: max(1rem, calc(50% - 600px + 1rem)); /* Dynamic left positioning */
+    border: 1px solid #e9ecef;
+    overflow-y: auto; /* Allow scrolling within sidebar if content is too long */
+    z-index: 10; /* Ensure it stays above other content */
+}
+
+.profile-summary {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover {
+    transform: scale(1.05);
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.image-upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.profile-image-container:hover .image-upload-overlay {
+    opacity: 1;
+}
+
+.image-upload-overlay i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.image-upload-overlay span {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.profile-summary h3 {
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-size: 2rem; /* Increased from 1.4rem */
+}
+
+.profile-summary p {
+    color: #666;
+    font-size: 1.1rem; /* Increased from 0.9rem */
+}
+
+/* Navigation Styles */
+.profile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.profile-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1.1rem; /* Added font size */
+}
+
+.profile-nav .nav-link:hover {
+    background: #f8f9fa;
+    color: #000;
+    transform: translateX(5px);
+}
+
+.profile-nav .nav-link.active {
+    background: #000;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-nav .nav-link i {
+    margin-right: 0.75rem;
+    font-size: 1.3rem; /* Increased from 1.1rem */
+    width: 24px; /* Increased from 20px */
+}
+
+/* Main Content Styles */
+.profile-main {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-left: 340px; /* Increased margin to account for sidebar + gap */
+    margin-right: 1rem; /* Reduced right margin */
+    margin-top: 0; /* Ensure it starts at the top */
+    width: calc(100% - 360px); /* Calculate exact width */
+}
+
+.profile-section {
+    display: none;
+    padding: 2rem;
+    height: calc(100vh - 140px); /* Fixed height based on viewport */
+    overflow: hidden; /* Prevent section from scrolling */
+    flex-direction: column; /* Stack section header and content */
+}
+
+.profile-section.active {
+    display: flex; /* Use flex when active */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem; /* Restored full margin */
+    padding: 1rem 0;
+    border-bottom: 2px solid #f1f3f4;
+    flex-wrap: nowrap; /* Prevent wrapping to keep items on same line */
+    gap: 1rem; /* Gap between elements */
+    width: 100%;
+    min-height: 60px; /* Ensure minimum height */
+    flex-shrink: 0; /* Prevent header from shrinking */
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to top of section */
+    background: #fff; /* Ensure background covers content below */
+    z-index: 5; /* Ensure it stays above scrollable content */
+}
+
+.section-header h2 {
+    color: #000;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    flex-shrink: 0; /* Prevent title from shrinking */
+}
+
+.section-header h2 i {
+    margin-right: 0.5rem;
+    color: #000;
+    font-size: 2rem;
+}
+
+.orderhistory-search-box {
+    position: relative; /* Add this for proper icon positioning */
+    display: flex !important;
+    align-items: center;
+    flex: 1; /* Take available space between title and stats */
+    max-width: 350px; /* Increased max width */
+    min-width: 250px; /* Increased minimum width to ensure visibility */
+    margin: 0 1.5rem; /* Increased margin for better spacing */
+    background: transparent; /* Clean background */
+    border-radius: 8px; /* Match input border radius */
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.orderhistory-search-box input {
+    padding: 0.8rem 2.5rem 0.8rem 1.2rem; /* Slightly increased padding */
+    border: 1px solid #ccc; /* More visible border */
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    background: #fff; /* Ensure white background */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #000; /* Ensure text is black */
+    min-height: 40px; /* Ensure minimum height */
+}
+
+.orderhistory-search-box input:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.orderhistory-search-box i {
+    position: absolute;
+    right: 1rem;
+    color: #000;
+    pointer-events: none;
+    font-size: 1.1rem;
+    z-index: 2; 
+}
+
+.section-stats {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0; 
+    
+}
+
+.stat-badge {
+    background: #000;
+    color: white;
+    padding: 0.6rem 1.2rem; /* Increased padding */
+    border-radius: 20px;
+    font-size: 1rem; /* Increased from 0.85rem */
+    font-weight: 500;
+}
+
+/* Form Styles */
+.profile-form-container {
+    max-width: 100%; /* Take full width instead of limited 800px */
+    flex: 1; /* Take remaining space */
+    overflow-y: auto; /* Make scrollable */
+    width: 100%; /* Take full width */
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem; /* Increased from 0.9rem */
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 1rem; /* Increased from 0.75rem */
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1.1rem; /* Increased from 1rem */
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-group input:not([readonly]):focus,
+.form-group textarea:not([readonly]):focus,
+.form-group select:not([disabled]):focus {
+    outline: none;
+    border-color: #000;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input[readonly],
+.form-group textarea[readonly],
+.form-group select[disabled] {
+    cursor: not-allowed;
+    color: #6c757d;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button Styles */
+.edit-btn, .btn-primary, .btn-secondary, .btn-danger {
+    padding: 1rem 1.8rem; /* Increased padding */
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem; /* Increased from 0.9rem */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.edit-btn {
+    background: #000;
+    color: white;
+}
+
+.edit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: #333;
+}
+
+.btn-primary {
+    background: #000;
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: #333;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Order History Styles */
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1; /* Take remaining space */
+    overflow-y: auto; /* Make only this container scrollable */
+    width: 100%; /* Take full width */
+}
+
+.order-card {
+    border: 2px solid #e9ecef; /* Thicker border */
+    border-radius: 12px;
+    padding: 2rem; /* Increased padding */
+    transition: all 0.3s ease;
+    background: #fff; /* Ensure white background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Add subtle shadow */
+}
+
+.order-card:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem; /* Increased margin */
+    padding-bottom: 1rem; /* Add padding */
+    border-bottom: 1px solid #f1f3f4; /* Add bottom border */
+}
+
+.order-info h4 {
+    color: #000;
+    margin: 0 0 0.25rem 0;
+    font-size: 1.3rem; /* Added font size */
+}
+
+.order-date {
+    color: #666;
+    font-size: 1rem; /* Increased from 0.9rem */
+}
+
+.order-status {
+    padding: 0.6rem 1.2rem; /* Increased padding */
+    border-radius: 20px;
+    font-size: 0.9rem; /* Increased from 0.8rem */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.order-status.delivered {
+    background: #d4edda;
+    color: #155724;
+}
+
+.order-status.processing {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.order-status.shipped {
+    background: #000;
+    color: white;
+}
+
+.order-items {
+    margin-bottom: 1.5rem; /* Increased margin */
+    padding: 1rem 0; /* Add padding */
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Increased gap */
+    padding: 1rem 0; /* Increased padding */
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item img {
+    width: 80px; /* Increased from 60px */
+    height: 80px; /* Increased from 60px */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e9ecef; /* Add border */
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h5 {
+    margin: 0 0 0.25rem 0;
+    color: #000;
+    font-size: 1.2rem; /* Added font size */
+}
+
+.item-details p {
+    margin: 0;
+    color: #666;
+    font-size: 1rem; /* Increased from 0.9rem */
+}
+
+.item-price {
+    font-weight: 600;
+    color: #000;
+    font-size: 1.3rem; /* Increased from 1.1rem */
+}
+
+.order-total {
+    text-align: right;
+    font-size: 1.5rem; /* Increased from 1.4rem */
+    font-weight: 700;
+    color: #000;
+    padding: 1.5rem 2rem; /* Increased padding */
+    border-top: 2px solid #e9ecef; /* Thicker border */
+    border-bottom: 1px solid #e9ecef; /* Add bottom border */
+    margin-bottom: 1.5rem; /* Increased margin */
+    background: #f8f9fa; /* Light background */
+    margin-left: -2rem; /* Extend to card edges */
+    margin-right: -2rem; /* Extend to card edges */
+}
+
+.order-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.order-actions button {
+    padding: 0.7rem 1.2rem; /* Increased padding */
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem; /* Increased from 0.9rem */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.order-status.shipped {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    color: white;
+}
+
+/* Wishlist Styles */
+.wishlist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    flex: 1; /* Take remaining space */
+    overflow-y: auto; /* Make scrollable */
+    width: 100%; /* Take full width */
+}
+
+.wishlist-item {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.wishlist-item:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.item-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.wishlist-item:hover .item-image img {
+    transform: scale(1.1);
+}
+
+.remove-wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #000;
+}
+
+.remove-wishlist-btn:hover {
+    background: #000;
+    color: white;
+}
+
+.item-info {
+    padding: 1rem;
+}
+
+.item-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #000;
+    font-size: 1.3rem; /* Increased from 1.1rem */
+}
+
+.item-price {
+    color: #000;
+    font-size: 1.4rem; /* Increased from 1.2rem */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    background: #000;
+    color: white;
+    border: none;
+    padding: 1rem; /* Increased from 0.75rem */
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.1rem; /* Added font size */
+}
+
+.add-to-cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: #333;
+}
+
+/* Settings Styles */
+.settings-container {
+    max-width: 100%; /* Take full width instead of limited 600px */
+    flex: 1; /* Take remaining space */
+    overflow-y: auto; /* Make scrollable */
+    width: 100%; /* Take full width */
+}
+
+.settings-group {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+}
+
+.settings-group h3 {
+    color: #000;
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem; /* Increased from 1.2rem */
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.setting-item {
+    margin-bottom: 1rem;
+}
+
+.setting-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem; /* Increased from 1rem */
+    color: #000;
+}
+
+.setting-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 24px; /* Increased from 20px */
+    height: 24px; /* Increased from 20px */
+    border: 2px solid #000;
+    border-radius: 4px;
+    margin-right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.setting-label input[type="checkbox"]:checked + .checkmark {
+    background: #000;
+}
+
+.setting-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-weight: bold;
+}
+
+.settings-group button {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Add animation to profile sections */
+.profile-section {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Add hover animations to cards */
+.order-card:hover,
+.wishlist-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile picture hover effect */
+.profile-image-container:hover .image-upload-overlay {
+    opacity: 1;
+}
+
+.image-upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    font-size: 1rem; /* Increased from 0.8rem */
+}
+
+.image-upload-overlay i {
+    font-size: 1.8rem; /* Increased from 1.5rem */
+    margin-bottom: 0.3rem;
+}
+@media (max-width: 968px) {
+    .profile-container {
+        display: grid; /* Restore grid layout on smaller screens */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem auto;
+        margin-top: 90px;
+    }
+    
+    .profile-sidebar {
+        position: static; /* Reset to normal flow on tablet */
+        width: auto; /* Reset width */
+        height: auto; /* Reset height */
+        left: auto; /* Reset positioning */
+        top: auto; /* Reset positioning */
+        order: 2;
+    }
+    
+    .profile-main {
+        order: 1;
+        margin-left: 0; /* Reset margin on smaller screens */
+    }
+    
+    .profile-section {
+        height: auto; /* Reset height on smaller screens */
+    }
+    
+    .section-header {
+        flex-wrap: wrap; /* Allow wrapping on tablet */
+        gap: 1rem;
+        position: static; /* Reset sticky positioning */
+    }
+    
+    .orderhistory-search-box {
+        order: 3; /* Put search below title and stats */
+        flex: 1 1 100%; /* Full width when wrapped */
+        max-width: none;
+        margin: 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+        order: 1;
+    }
+    
+    .section-stats {
+        order: 2;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .wishlist-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        overflow-y: visible; /* Reset scrolling on smaller screens */
+    }
+    
+    .orders-container {
+        overflow-y: visible; /* Reset scrolling on smaller screens */
+    }
+    
+    .profile-form-container,
+    .settings-container {
+        overflow-y: visible; /* Reset scrolling on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-container {
+        padding: 0 0.5rem;
+        margin-top: 80px;
+    }
+    
+    .profile-section {
+        padding: 1rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+        order: 1;
+    }
+    
+    .orderhistory-search-box {
+        order: 2;
+        max-width: none;
+        margin: 0;
+    }
+    
+    .section-stats {
+        order: 3;
+        justify-content: center;
+    }
+    
+    .profile-summary h3 {
+        font-size: 1.6rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .order-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .order-card {
+        padding: 1.5rem;
+    }
+    
+    .order-total {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .wishlist-container {
+        grid-template-columns: 1fr;
+    }
+}
