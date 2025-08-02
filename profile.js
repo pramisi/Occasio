@@ -9,14 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Remove active class from all links and sections
             navLinks.forEach(l => l.classList.remove('active'));
             sections.forEach(s => s.classList.remove('active'));
             
-            // Add active class to clicked link
             this.classList.add('active');
             
-            // Show corresponding section
             const targetSection = document.getElementById(this.dataset.section);
             if (targetSection) {
                 targetSection.classList.add('active');
@@ -77,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Event listeners for edit functionality
     editBtn.addEventListener('click', enableEditMode);
     
     cancelBtn.addEventListener('click', function() {
@@ -147,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             const wishlistItem = this.closest('.wishlist-item');
             
-            // Animate removal
             wishlistItem.style.transform = 'scale(0.8)';
             wishlistItem.style.opacity = '0';
             
@@ -209,7 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const orderNumber = orderCard.querySelector('.order-info h4').textContent;
             showNotification(`Tracking ${orderNumber}...`, 'info');
             
-            // Simulate opening tracking page
             setTimeout(() => {
                 showNotification('Tracking information opened in new tab', 'success');
             }, 1000);
@@ -258,7 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showNotification(message, type = 'info') {
-        // Create notification element
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
         notification.innerHTML = `
@@ -266,7 +259,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <span>${message}</span>
         `;
         
-        // Style the notification
         Object.assign(notification.style, {
             position: 'fixed',
             top: '20px',
@@ -288,12 +280,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         document.body.appendChild(notification);
         
-        // Animate in
         setTimeout(() => {
             notification.style.transform = 'translateX(0)';
         }, 100);
         
-        // Remove after delay
         setTimeout(() => {
             notification.style.transform = 'translateX(100%)';
             setTimeout(() => {
@@ -547,4 +537,26 @@ document.addEventListener('DOMContentLoaded', function() {
     profileForm.addEventListener('submit', function() {
         localStorage.removeItem('occasio_profile_draft');
     });
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                this.textContent = 'Enable Light Mode';
+            } else {
+                this.textContent = 'Enable Dark Mode';
+            }
+            
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.textContent = 'Enable Light Mode';
+        }
+    }
 });
