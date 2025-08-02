@@ -45,16 +45,6 @@ html{
 	border-radius:10px;
 	padding: 1rem 3rem;
 }
-/* .navbar {
-  background-color: white;
-  color: black;
-  transition: background-color 0.3s, color 0.3s;
-} */
-
-body.dark-mode .nav {
-  background-color: #1e1e1e; /* Dark background */
-  color: white;
-}
 
 body {
   background-color: white;
