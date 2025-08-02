@@ -79,44 +79,162 @@
 		</div>
 		
 	</div>
-<section class="categories-section">
-		<h1>Categories of The Month</h1>
-	
-	
-		<div class="categories-container">
-		  <div class="category-product">
-			<img src="file:///C:/Users/HARIom/Pictures/shopping.webp" alt="" />
-			<h6>Tops</h6>
-			<a href="page3.html"><button>Go Shop</button></a>
-		  </div>
-		  <div class="category-product">
-			<img src="file:///C:/Users/HARIom/Pictures/51QPKEitjNL._UX522_.jpg" alt="" />
-			<h6>Party wear</h6>
-			<a href="page1.html"><button>Go Shop</button></a>
-		  </div>
-		  <div class="category-product">
-			<img src="file:///C:/Users/HARIom/Pictures/shopping%20(1).webp" alt="" />
-			<h6>Accessories</h6>
-			<a href="page5.html"><button>Go Shop</button></a>
-		  </div>
-		  <div class="category-product">
-			<img src="file:///C:/Users/HARIom/Pictures/40fe91a40729983d42fabfadcf4be09f.jpg" alt="" />
-			<h6>Winter wear</h6>
-			<a href="page4.html"><button>Go Shop</button></a>
-		  </div>
-		  <div class="category-product">
-			<img src="file:///C:/Users/HARIom/Pictures/92876f69b3445fa4999ab0382d5785e8.jpg" alt="" />
-			<h6>Boots</h6>
-			<a href="page6.html"><button>Go Shop</button></a>
-		  </div>
-		  <div class="category-product">
-			<img src="file:///C:/Users/HARIom/Pictures/-473Wx593H-464501984-green-MODEL3.webp" alt="" />
-			<h6>Pants</h6>
-			<a href="page2.html"><button>Go Shop</button></a>
-		  </div>
-		  
+
+<section class="categories-section improved-categories">
+  <h1 class="categories-title">Categories of The Month</h1>
+  <div class="categories-grid">
+	<!-- Row 1 -->
+	<div class="category-card">
+  <img src="images/4d3f582270674ad4a75f1a832f5cc8b5_w1000_q90.jpeg" alt="Tops" class="category-img" />
+	  <div class="category-icon"><i class="fa fa-female"></i></div>
+	  <h3 class="category-name">Tops</h3>
+	  <a href="page3.html" class="shop-btn">Go Shop</a>
 	</div>
+	<div class="category-card">
+	  <img src="images/51QPKEitjNL._UX522_.jpg" alt="Party Wear" class="category-img" />
+	  <div class="category-icon"><i class="fa fa-glass"></i></div>
+	  <h3 class="category-name">Party Wear</h3>
+	  <a href="page1.html" class="shop-btn">Go Shop</a>
+	</div>
+	<div class="category-card">
+	  <img src="images/1578995627242_19.webp" alt="Accessories" class="category-img" />
+	  <div class="category-icon"><i class="fa fa-diamond"></i></div>
+	  <h3 class="category-name">Accessories</h3>
+	  <a href="page5.html" class="shop-btn">Go Shop</a>
+	</div>
+	<!-- Row 2 -->
+	<div class="category-card">
+	  <img src="images/40fe91a40729983d42fabfadcf4be09f.jpg" alt="Winter Wear" class="category-img" />
+	  <div class="category-icon"><i class="fa fa-snowflake-o"></i></div>
+	  <h3 class="category-name">Winter Wear</h3>
+	  <a href="page4.html" class="shop-btn">Go Shop</a>
+	</div>
+	<div class="category-card">
+	  <img src="images/8907884275888_1.webp" alt="Boots" class="category-img" />
+	  <div class="category-icon"><i class="fa fa-shoe-prints"></i></div>
+	  <h3 class="category-name">Boots</h3>
+	  <a href="page6.html" class="shop-btn">Go Shop</a>
+	</div>
+	<div class="category-card">
+  <img src="images/8907884217376_2.webp" alt="Pants" class="category-img" />
+  <div class="category-icon"><i class="fa fa-user"></i></div>
+  <h3 class="category-name">Pants</h3>
+  <a href="page2.html" class="shop-btn">Go Shop</a>
+	</div>
+  </div>
 </section>
+
+<!-- Improved Categories Section Styles -->
+<style>
+.improved-categories {
+  background: #f8f8fc;
+  padding: 50px 0 30px 0;
+  margin-bottom: 30px;
+}
+.categories-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px 36px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.category-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 38px 28px 38px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  min-height: 320px;
+  max-width: 400px;
+  width: 100%;
+}
+.category-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transform: scale(1.04);
+  z-index: 2;
+}
+.category-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  background: #eee;
+  background-size: cover;
+  background-position: center;
+}
+.category-icon {
+  font-size: 2.1rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+.category-name {
+  font-size: 1.35rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+.shop-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffd700 60%, #ffb700 100%);
+  color: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 32px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  margin-top: auto;
+}
+.shop-btn:hover {
+  background: linear-gradient(90deg, #ffb700 60%, #ffd700 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,215,0,0.18);
+}
+@media (max-width: 900px) {
+  .categories-grid {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	gap: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .categories-grid {
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(6, 1fr);
+	gap: 18px;
+  }
+  .category-card {
+	min-height: 160px;
+	max-width: 100%;
+	padding: 14px 8px 12px 8px;
+  }
+  .category-img {
+	width: 80px;
+	height: 80px;
+  }
+}
+</style>
 <div class="heading">
 <h1 align="center"><b>Featured products</b></h1>
 </div>
