@@ -74,6 +74,25 @@ body.dark-mode #theme-toggle {
   color: black;
 }
 
+/* Enhanced Dark Mode Styles */
+body.dark-mode .header {
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .header #logo {
+  color: #ffffff !important;
+}
+
+body.dark-mode .navbar a {
+  color: #ffffff !important;
+}
+
+body.dark-mode .navbar a:hover {
+  background-color: #333 !important;
+  color: #ffffff !important;
+}
+
 #menu-bar{
 	display:none;
 }
