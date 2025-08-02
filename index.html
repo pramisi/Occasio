@@ -18,7 +18,8 @@
 		<nav class="navbar">
 			<a href="e-commerce.html">Home</a>
 			<a href="#">About</a>
-			<a href="#">Contact</a>
+			<a href="#Products">Products</a>
+			<a href="contact.html">Contact</a>
 			
 		</nav>
 		<div class="icons">
@@ -30,7 +31,7 @@
 			</div>
         
 		</div>
-		
+	
             
 
     </header>
@@ -123,8 +124,8 @@
 		  
 	</div>
 </section>
-<div class="heading">
-<h1 align="center"><b>Featured products</b></h1>
+<div class="heading" id="Products">
+<h1 text-align="center"><b>Featured products</b></h1>
 </div>
 <div class="name">
 	<div class="container">
@@ -432,6 +433,126 @@
 	  </div>
 	</div>
 </footer>
+
+
+<!-- Enhanced Footer Styles -->
+<style>
+  .enhanced-footer {
+	background: #222;
+	color: #f3f3f3;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	font-size: 1.4em;
+	padding: 40px 20px 10px 20px;
+	margin-top: 40px;
+  }
+  .footer-brand {
+	text-align: center;
+	margin-bottom: 20px;
+  }
+  .footer-brand h1 {
+	font-size: 2.2rem;
+	letter-spacing: 2px;
+	margin-bottom: 5px;
+  }
+  .footer-brand .tagline {
+	font-size: 1.1rem;
+	color: #bdbdbd;
+	margin-bottom: 10px;
+  }
+  .footer-main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 30px;
+	max-width: 1100px;
+	margin: 0 auto;
+  }
+  .footer-column {
+	flex: 1 1 200px;
+	min-width: 180px;
+	margin-bottom: 20px;
+  }
+  .footer-column h2 {
+	font-size: 1.1rem;
+	margin-bottom: 12px;
+	color: #ffd700;
+	letter-spacing: 1px;
+  }
+  .footer-links, .contact-info {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  .footer-links li, .contact-info li {
+	margin-bottom: 10px;
+  }
+  .footer-links a {
+	color: #f3f3f3;
+	text-decoration: none;
+	transition: color 0.2s;
+	font-size: 1.15rem;
+  }
+  .footer-links a:hover {
+	color: #ffd700;
+	text-decoration: underline;
+  }
+  .contact-info a {
+	color: #f3f3f3;
+	text-decoration: none;
+	margin-left: 5px;
+	font-size: 1.15rem;
+  }
+  .contact-info a:hover {
+	color: #ffd700;
+	text-decoration: underline;
+  }
+  .contact-info i {
+	margin-right: 6px;
+	color: #ffd700;
+  }
+  .social-icons a {
+	margin-right: 10px;
+	font-size: 1.6rem;
+	color: #f3f3f3;
+	transition: color 0.2s;
+  }
+  .social-icons a:hover {
+	color: #ffd700;
+  }
+  .occasion-filter label {
+	display: block;
+	margin-bottom: 7px;
+	font-size: 1.15rem;
+	cursor: pointer;
+  }
+  .occasion-filter input[type="checkbox"] {
+	accent-color: #ffd700;
+	margin-right: 6px;
+  }
+  .footer-divider {
+	border-top: 1px solid #444;
+	margin: 25px 0 10px 0;
+  }
+  .footer-bottom {
+	text-align: center;
+	font-size: 0.95rem;
+	color: #bdbdbd;
+	margin-bottom: 0;
+  }
+  @media (max-width: 800px) {
+	.footer-main {
+	  flex-direction: column;
+	  align-items: center;
+	  gap: 0;
+	}
+	.footer-column {
+	  min-width: 220px;
+	  width: 100%;
+	  margin-bottom: 25px;
+	  text-align: center;
+	}
+  }
+</style>
 
 
 </body>

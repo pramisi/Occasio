@@ -61,12 +61,7 @@ html{
 }
 .icons img:hover{
 	height: 25px;
-
 }
-#menu-bar{
-	display:none;
-}
-
 .search-box.active{
     left: 40%;
 }
@@ -386,29 +381,6 @@ letter-spacing: 3px;
   .menu > h2 {
 	margin-bottom: 2rem;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width:768px){
 	html{
