@@ -18,45 +18,49 @@ html{
 	scroll-behavior: smooth;
 }
 .header{
-	position:fixed;
-	top:0;
-	left:0;
-	right:0;
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-	padding:2rem 7%;
-	background-color:white;
-	box-shadow:rgba(0,0,0,0.35) 0px 5px 15px;
-	z-index: 100000;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+  z-index: 100000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.header #logo{
+.logo{
+  left: 51px;
+}
+.logo a{
 	font-size:3.5rem;
 	color:black;
 }
+.navbar{
+	  display: flex;
+  justify-content: center;
+}
+
 .navbar a{
 	color:black;
 	font-size:1.7rem;
-	margin-left:1rem;
+	  margin: 0px 30px;
 }
 .navbar a:hover{
-	background-color:var(--maincolor);
-	color:white;
-	border-radius:10px;
-	padding: 1rem 3rem;
+	font-size: 20px;
+	font-weight: bold;
 }
-.icons div{
-	font-size: 2rem;
-	margin-left: 1rem;
-	color:black;
-	cursor:pointer;
-
+.icons{
+	display: flex;
 }
-.icons div:hover{
-	background-color:var(--maincolor);
-	color:white;
-	border-radius:10px;
-	padding: 1rem 3rem;
+.menu-bar,.shop-cart{
+	padding: 0px 0px 0px 30px;
+}
+.icons img{
+	height: 20px;
+}
+.icons img:hover{
+	height: 25px;
 
 }
 #menu-bar{
@@ -66,19 +70,12 @@ html{
 .search-box.active{
     left: 40%;
 }
-.search-box{
-    position: absolute;
-    top: 110%;
-    left: 100%;
-    width: 50%;
-    right: 2rem;
-}
 .search-box input{
-    padding: 1.5rem 2rem;
-    width: 100%;
-    border-radius: 15px;
-    border: 0;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	width: 400px;
+  height: 35px;
+  border-radius: 10px;
+  padding: 10px;
+  border-style: groove;
 }
 
 
