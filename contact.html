@@ -1,71 +1,81 @@
 <!DOCTYPE html>
-<html>
-  <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Contact us</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-</html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
 <body>
   <section>
     <div class="contact-us-section">
+      <!-- Contact Info -->
       <div class="contactinfo">
         <div>
           <h2>Contact Info</h2>
           <ul class="info">
-            <li>
-              <span><img src="file:///C:/Users/HARIom/Downloads/icons8-location-50.png"></span>
-              <span>Gurgugram,Haryana</span>
-            </li>
-            <li>
-              <span><img src="file:///C:/Users/HARIom/Downloads/icons8-composing-mail-50.png"></span>
-              <span>lorem@ipsum.com</span>
-            </li>
-            <li>
-              <span><img src="file:///C:/Users/HARIom/Downloads/icons8-ringer-volume-50.png"></span>
-              <span>+918451212157</span>
-            </li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Gurugram, Haryana</span></li>
+            <li><i class="fas fa-envelope"></i><span>support@occasio.com</span></li>
+            <li><i class="fas fa-phone-alt"></i><span>+91 84512 12157</span></li>
           </ul>
         </div>
-          <ul class="sci">
-            <li><a href="#"><img src="file:///C:/Users/HARIom/Downloads/icons8-facebook-50.png"></a></li>
-            <li><a href="#"><img src="file:///C:/Users/HARIom/Downloads/icons8-twitter-50.png"></a></li>
-            <li><a href="#"><img src="file:///C:/Users/HARIom/Downloads/icons8-instagram-50.png"></a></li>
-            <li><a href="#"><img src="file:///C:/Users/HARIom/Downloads/icons8-pinterest-50.png"></a></li>
-          </ul>
+        <!--Add Occasio social media details-->
+        <ul class="sci">
+          <li><a href="Occasio-Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="Occasio"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="Occasio"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="Occasio"><i class="fab fa-pinterest-p"></i></a></li>
+        </ul>
       </div>
+
+      <!-- Contact Form -->
       <div class="contactForm">
-        <h2>Send a Message</h2>
+        <h2>We’d Love to Hear From You</h2>
+        <p>Have a question, suggestion, or want to share your experience? Drop us a message!</p>
         <div class="formBox">
           <div class="inputBox w50">
-            <input type="text" name="" required>
+            <input type="text" required>
             <span>First Name</span>
-
           </div>
           <div class="inputBox w50">
-            <input type="text" name="" required>
+            <input type="text" required>
             <span>Last Name</span>
           </div>
           <div class="inputBox w50">
-            <input type="text" name="" required>
+            <input type="email" required>
             <span>Email Address</span>
-
           </div>
           <div class="inputBox w50">
-            <input type="text" name="" required>
+            <input type="text" required>
             <span>Mobile Number</span>
           </div>
           <div class="inputBox w100">
-            <textarea name="" required></textarea>
-            <span>Write your message here....</span>
-          </div>
-          <div class="inputBox w100">
-            <input type="submit" value="Send">
+            <textarea required></textarea>
+            <span>Your Message</span>
           </div>
 
+          <!-- Star Rating -->
+          <div class="inputBox w100">
+            <label class="inline-rating">
+              Rate your experience:
+              <span class="star-rating">
+                <input type="radio" id="5-stars" name="rating" value="5"><label for="5-stars" class="fas fa-star"></label>
+                <input type="radio" id="4-stars" name="rating" value="4"><label for="4-stars" class="fas fa-star"></label>
+                <input type="radio" id="3-stars" name="rating" value="3"><label for="3-stars" class="fas fa-star"></label>
+                <input type="radio" id="2-stars" name="rating" value="2"><label for="2-stars" class="fas fa-star"></label>
+                <input type="radio" id="1-star" name="rating" value="1"><label for="1-star" class="fas fa-star"></label>
+              </span>
+            </label>
+          </div>
+
+
+          <div class="inputBox w100">
+            <input type="submit" value="Send Message">
+          </div>
         </div>
       </div>
-    </section>
-        
+    </div>
+  </section>
 </body>
+</html>
