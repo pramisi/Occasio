@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Profile - Occasio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" type="text/css" href="profile.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#" id="logo">Occasio</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#Products">Products</a>
+            <a href="contact.html">Contact</a>
+            
+        </nav>
+
+        <div>
+            <button id="theme-toggle" class="button" style="position:absolute; top:20px; right:20px;">Enable Dark Mode</button>
+        </div>
+            
+    </header>
+
+    <!-- Profile Dashboard Container -->
+    <div class="profile-container">
+        <!-- Sidebar Navigation -->
+        <div class="profile-sidebar">
+            <div class="profile-summary">
+                <div class="profile-image-container">
+                    <img src="https://via.placeholder.com/120/6c5ce7/ffffff?text=User" alt="Profile Picture" id="profile-img">
+                    <div class="image-upload-overlay">
+                        <i class="fas fa-camera"></i>
+                        <span>Change Photo</span>
+                    </div>
+                    <input type="file" id="profile-upload" accept="image/*" style="display: none;">
+                </div>
+                <h3 id="user-name">John Doe</h3>
+                <p id="user-email">john.doe@email.com</p>
+            </div>
+            
+            <nav class="profile-nav">
+                <ul>
+                    <li><a href="#profile-section" class="nav-link active" data-section="profile-section">
+                        <i class="fas fa-user"></i> Profile Details
+                    </a></li>
+                    <li><a href="#orders-section" class="nav-link" data-section="orders-section">
+                        <i class="fas fa-shopping-bag"></i> Order History
+                    </a></li>
+                    <li><a href="#wishlist-section" class="nav-link" data-section="wishlist-section">
+                        <i class="fas fa-heart"></i> Saved Items
+                    </a></li>
+                    <li><a href="#settings-section" class="nav-link" data-section="settings-section">
+                        <i class="fas fa-cog"></i> Settings
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Profile Content -->
+        <div class="profile-main">
+            <!-- Profile Details Section -->
+            <section id="profile-section" class="profile-section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-user"></i> Profile Information</h2>
+                    <button class="edit-btn" id="edit-profile-btn">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </button>
+                </div>
+
+                <div class="profile-form-container">
+                    <form id="profile-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" value="John" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" value="Doe" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" value="john.doe@email.com" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567" readonly>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="address">Address</label>
+                                <textarea id="address" name="address" readonly>123 Fashion Street, Style City, SC 12345</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="birthdate">Birth Date</label>
+                                <input type="date" id="birthdate" name="birthdate" value="1990-01-15" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" disabled>
+                                    <option value="male">Male</option>
+                                    <option value="female" selected>Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions" style="display: none;">
+                            <button type="button" class="btn-secondary" id="cancel-edit-btn">Cancel</button>
+                            <button type="submit" class="btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Order History Section -->
+            <section id="orders-section" class="profile-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-shopping-bag"></i> Order History</h2>
+                    <div class="orderhistory-search-box">
+                        <input type="text" id="order-search" placeholder="Search orders...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="section-stats">
+                        <span class="stat-badge">Total Orders: 5</span>
+                    </div>
+                </div>
+
+                <div class="orders-container">
+                    <div class="order-card" data-order="ORD-2024-001 Winter Collection Coat Black">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <h4>Order #ORD-2024-001</h4>
+                                <span class="order-date">January 15, 2024</span>
+                            </div>
+                            <div class="order-status delivered">Delivered</div>
+                        </div>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <img src="images/winter-collection-coat.jpg" alt="Product">
+                                <div class="item-details">
+                                    <h5>Winter Collection Coat</h5>
+                                    <p>Size: M, Color: Black</p>
+                                </div>
+                                <div class="item-price">$89.99</div>
+                            </div>
+                        </div>
+                        <div class="order-total">Total: $89.99</div>
+                        <div class="order-actions">
+                            <button class="btn-secondary">Track Order</button>
+                            <button class="btn-primary">Reorder</button>
+                        </div>
+                    </div>
+
+                    <div class="order-card" data-order="ORD-2024-002 Designer Ankle Boots Brown">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <h4>Order #ORD-2024-002</h4>
+                                <span class="order-date">February 3, 2024</span>
+                            </div>
+                            <div class="order-status processing">Processing</div>
+                        </div>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <img src="images/ankle-boots.webp" alt="Product">
+                                <div class="item-details">
+                                    <h5>Designer Ankle Boots</h5>
+                                    <p>Size: 8, Color: Brown</p>
+                                </div>
+                                <div class="item-price">$129.99</div>
+                            </div>
+                        </div>
+                        <div class="order-total">Total: $129.99</div>
+                        <div class="order-actions">
+                            <button class="btn-secondary">Track Order</button>
+                            <button class="btn-primary">Reorder</button>
+                        </div>
+                    </div>
+
+                    <div class="order-card" data-order="ORD-2024-003 Summer Dress Floral Pattern">
+                        <div class="order-header">
+                            <div class="order-info">
+                                <h4>Order #ORD-2024-003</h4>
+                                <span class="order-date">March 12, 2024</span>
+                            </div>
+                            <div class="order-status shipped">Shipped</div>
+                        </div>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <img src="images/summer-dress.webp" alt="Product">
+                                <div class="item-details">
+                                    <h5>Summer Dress</h5>
+                                    <p>Size: S, Color: Floral Pattern</p>
+                                </div>
+                                <div class="item-price">$65.99</div>
+                            </div>
+                        </div>
+                        <div class="order-total">Total: $65.99</div>
+                        <div class="order-actions">
+                            <button class="btn-secondary">Track Order</button>
+                            <button class="btn-primary">Reorder</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Saved Items Section -->
+            <section id="wishlist-section" class="profile-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-heart"></i> Saved Items</h2>
+                    <div class="section-stats">
+                        <span class="stat-badge">8 Items</span>
+                    </div>
+                </div>
+
+                <div class="wishlist-container">
+                    <div class="wishlist-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150/6c5ce7/ffffff?text=Product" alt="Product">
+                            <button class="remove-wishlist-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <h4>Elegant Summer Dress</h4>
+                            <p class="item-price">$59.99</p>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150/00b894/ffffff?text=Product" alt="Product">
+                            <button class="remove-wishlist-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <h4>Classic Denim Jacket</h4>
+                            <p class="item-price">$79.99</p>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150/e17055/ffffff?text=Product" alt="Product">
+                            <button class="remove-wishlist-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <h4>Stylish Handbag</h4>
+                            <p class="item-price">$99.99</p>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150/fd79a8/ffffff?text=Product" alt="Product">
+                            <button class="remove-wishlist-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <h4>Designer Sneakers</h4>
+                            <p class="item-price">$149.99</p>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150/00cec9/ffffff?text=Product" alt="Product">
+                            <button class="remove-wishlist-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <h4>Vintage Watch</h4>
+                            <p class="item-price">$199.99</p>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150/a29bfe/ffffff?text=Product" alt="Product">
+                            <button class="remove-wishlist-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <h4>Leather Boots</h4>
+                            <p class="item-price">$179.99</p>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150/fab1a0/ffffff?text=Product" alt="Product">
+                            <button class="remove-wishlist-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <h4>Silk Scarf</h4>
+                            <p class="item-price">$39.99</p>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150/ff7675/ffffff?text=Product" alt="Product">
+                            <button class="remove-wishlist-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="item-info">
+                            <h4>Winter Coat</h4>
+                            <p class="item-price">$249.99</p>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings-section" class="profile-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-cog"></i> Account Settings</h2>
+                </div>
+
+                <div class="settings-container">
+                    <div class="settings-group">
+                        <h3>Notifications</h3>
+                        <div class="setting-item">
+                            <label class="setting-label">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Email notifications for new products
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label class="setting-label">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Order status updates
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label class="setting-label">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Promotional offers and discounts
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Privacy</h3>
+                        <div class="setting-item">
+                            <label class="setting-label">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                                Make profile public
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label class="setting-label">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Share purchase history for recommendations
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Account Actions</h3>
+                        <button class="btn-secondary">Change Password</button>
+                        <button class="btn-danger">Delete Account</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Profile JavaScript -->
+    <script src="profile.js"></script>
+</body>
+</html>
