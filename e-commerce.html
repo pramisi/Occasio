@@ -5,12 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Party wear</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 	<link rel="stylesheet" type="text/css" href="style2.css">
 </head>
-<body>
-
+<body id="mainBody">
 
 <div class="main-content">
 	
@@ -62,4 +59,27 @@
 </footer>
 </div>
 </script>
+  
+<script>
+  const toggleBtn = document.getElementById("darkModeToggle");
+  const body = document.getElementById("mainBody");
+
+  // Load mode from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    toggleBtn.innerHTML = "☀️ Light Mode";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    if (body.classList.contains("dark-mode")) {
+      toggleBtn.innerHTML = "☀️ Light Mode";
+      localStorage.setItem("theme", "dark");
+    } else {
+      toggleBtn.innerHTML = "🌙 Dark Mode";
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
+
 </body>

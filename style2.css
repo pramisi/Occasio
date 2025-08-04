@@ -5,6 +5,8 @@
     box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+
 body
 {
     display:flex;
@@ -12,6 +14,8 @@ body
     align-content: center;
     min-height:100vh;
     background: #dcdcdc;
+	 background-color: var(--bg-color);
+    color: var(--text-color);
 }
 .container{
 	position:relative;
@@ -134,9 +138,8 @@ body
 }
 
 /* improve footer */
+
 custom-footer {
-    background: linear-gradient(90deg, #d0b239 0%, #cb9817 50% );
-    color: #fff;
     padding: 36px 0 18px 0;
     margin-top: 40px;
     border-radius: 30px 30px 0 0;
@@ -147,8 +150,9 @@ custom-footer {
     overflow:hidden;
 	transition: 1s;
 	width: 100%;
+	background: var(--footer-bg);
+  color: var(--footer-text);
 }
-
 .custom-footer:hover {
     background: linear-gradient(90deg, rgb(4, 43, 77) 0%,rgb(50, 61, 216) 100%);
 }
@@ -224,4 +228,32 @@ custom-footer {
 .footer-icon:hover:before {
     opacity: 0.22;
     transform: scale(1.6);
+}
+
+/* add light and mark toggle */
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #111;
+  --footer-bg: #e3a815;
+  --footer-text: #fff;
+  --button-bg: #e3a815;
+  --button-text: #111;
+}
+
+.button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --footer-bg: #1c1c1e;
+  --footer-text: #f5f5f5;
+  --button-bg: #333;
+  --button-text: #f5f5f5;
 }
