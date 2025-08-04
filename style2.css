@@ -132,3 +132,96 @@ body
 .container .card .content .price_rating .fa.grey{
 	color: #ccc;
 }
+
+/* improve footer */
+custom-footer {
+    background: linear-gradient(90deg, #d0b239 0%, #cb9817 50% );
+    color: #fff;
+    padding: 36px 0 18px 0;
+    margin-top: 40px;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 6px 30px rgb(17, 17, 18);
+    transition: background 0.8s cubic-bezier(0.4,0,0.2,1);
+    text-align: center;
+    position:relative;
+    overflow:hidden;
+	transition: 1s;
+	width: 100%;
+}
+
+.custom-footer:hover {
+    background: linear-gradient(90deg, rgb(4, 43, 77) 0%,rgb(50, 61, 216) 100%);
+}
+
+.footer-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.footer-copy {
+    font-size: 1.06em;
+    letter-spacing: 0.4px;
+    opacity: 0.95;
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    font-size: 1.04em;
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+}
+
+.footer-icon {
+    display: inline-block;
+    background: rgba(255,255,255,0.09);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    margin: 0 7px;
+    color: #ffd513;
+    font-size: 1.35em;
+    transition: 
+        background 0.35s cubic-bezier(.33,1,.68,1), 
+        color 0.33s, 
+        transform 0.24s;
+    text-align:center;
+    box-shadow: 0 2px 10px rgba(100,50,255,0.1);
+    position: relative;
+}
+
+.footer-icon.fb:hover {
+    background: #4267B2;
+    color: #fff;
+    transform: scale(1.2) rotate(-5deg);
+
+}
+.footer-icon.tw:hover {
+    background: #1da1f2;
+    color: #fff;
+    transform: scale(1.2) rotate(3deg);
+}
+.footer-icon.ig:hover {
+	background-color : rgb(231, 90, 90);
+	 color: #fff;
+    transform: scale(1.2) rotate(8deg);
+
+}
+
+.footer-icon:before {
+    content: "";
+    position: absolute;
+    top: 46%;
+    left: 9%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: -1;
+}
+
+.footer-icon:hover:before {
+    opacity: 0.22;
+    transform: scale(1.6);
+}

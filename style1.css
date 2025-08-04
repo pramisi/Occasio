@@ -56,15 +56,6 @@ html{
 	border-radius:10px;
 	padding: 1rem 3rem;
 }
- main
-.icons div{
-	font-size: 2rem;
-	margin-left: 1rem;
-	color:var(--textcolor);
-	cursor:pointer;
-	gap:12px;
-
- main
 
 body {
   background-color: white;
@@ -77,8 +68,7 @@ body {
 	color:white;
 	border-radius:10px;
 	padding: 1rem 3rem;
-=======
- main
+}
 
 body.dark-mode {
   background-color: #121212;
@@ -536,7 +526,7 @@ letter-spacing: 3px;
 
 
 
- main
+
 @media (max-width:768px){
 	html{
 		font-size:50%;
