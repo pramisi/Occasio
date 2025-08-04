@@ -32,8 +32,11 @@
       <h3><span class="about-icon">✨</span> About Occasio</h3>
       <p>At Occasio, fashion isn't just clothing — it's an expression of moments, moods, and milestones.</p>
       <p>We are a modern fashion brand born from the belief that every occasion deserves its own style.</p>
-      <p>Whether it's a casual brunch, a boardroom meeting, or a night under city lights, Occasio crafts versatile pieces that effortlessly elevate your presence.</p>
-      <p>Our collections blend timeless elegance with contemporary edge, designed for those who value individuality, quality, and confidence. With a focus on premium fabrics, thoughtful details, and sustainable practices, we aim to empower you to dress not just for the day, but for the story you want to tell.</p>
+      <p>Whether it's a casual brunch, a boardroom meeting, or a night under city lights, Occasio crafts versatile 
+        pieces that effortlessly elevate your presence.</p>
+      <p>Our collections blend timeless elegance with contemporary edge, designed for those who value individuality,
+         quality, and confidence. With a focus on premium fabrics, thoughtful details, and sustainable practices, we
+          aim to empower you to dress not just for the day, but for the story you want to tell.</p>
     </div>
   </div>
 </div>
@@ -50,28 +53,7 @@
 		<a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
 		<a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
 	</p>
-	
 </footer>
 </div>
-
-<script>
-document.getElementById('darkModeToggle').onclick = function() {
-    document.body.classList.toggle('dark-mode');
-    // Optional: Save preference
-    if(document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-        this.textContent = '☀️ Light Mode';
-    } else {
-        localStorage.setItem('theme', 'light');
-        this.textContent = '🌙 Dark Mode';
-    }
-};
-// On page load, set theme from localStorage
-window.onload = function() {
-    if(localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('darkModeToggle').textContent = '☀️ Light Mode';
-    }
-};
 </script>
 </body>
