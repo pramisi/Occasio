@@ -63,8 +63,7 @@ html{
 	color:var(--textcolor);
 	cursor:pointer;
 	gap:12px;
-
- main
+}
 
 body {
   background-color: white;
@@ -77,8 +76,7 @@ body {
 	color:white;
 	border-radius:10px;
 	padding: 1rem 3rem;
-=======
- main
+}
 
 body.dark-mode {
   background-color: #121212;
@@ -533,39 +531,3 @@ letter-spacing: 3px;
 
 
 
-
-
-
- main
-@media (max-width:768px){
-	html{
-		font-size:50%;
-	}
-	#menu-bar{
-		display:inline-block;
-		cursor:pointer;
-	}
-	
-	.header{
-		padding:2rem;
-		
-	}
-	.navbar{
-		position:fixed;
-		top:100%;
-		width: 58rem;
-		background: var(--maincolor);
-	}
-	.navbar.active{
-		display: flex;
-	}
-	.navbar a{
-		display:block;
-		color:white;
-		background: black;
-		margin:3rem;
-		padding: 1.5rem;
-		border-radius: 15px;
-		width:45rem;
-	}
-}
