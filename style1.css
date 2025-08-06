@@ -370,3 +370,74 @@ img {
 .category-product button:hover {
   background-color: #0056b3;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .header,
+body.dark-mode .categories-section,
+body.dark-mode .footer-section,
+body.dark-mode .gallery,
+body.dark-mode .card,
+body.dark-mode .category-product {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0 !important;
+  border-color: #444 !important;
+}
+
+body.dark-mode a,
+body.dark-mode h1,
+body.dark-mode h6,
+body.dark-mode p {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode button {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+  border: none;
+}
+
+body.dark-mode .footer-bottom {
+  color: #888 !important;
+}
+
+body.dark-mode .social-icons a {
+  color: #f0f0f0 !important;
+}
+
+/* Apply dark background and light text inside special containers */
+body.dark-mode .main-background,
+body.dark-mode .left-back,
+body.dark-mode .left-inner,
+body.dark-mode .right-content,
+body.dark-mode .inner-main-content {
+  background-color: #1c1c1c !important;
+  color: #f0f0f0 !important;
+}
+
+/* Make sure text inside those sections is visible */
+body.dark-mode .right-content h1,
+body.dark-mode .right-content p,
+body.dark-mode .inner-main-content h1,
+body.dark-mode .inner-main-content p {
+  color: #f0f0f0 !important;
+}
+
+/* Fix the shop now button text */
+body.dark-mode .shopnow-btn {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+  border: none;
+}
+body.dark-mode .heading h1 {
+  color: #000 !important;
+}
+body.dark-mode .action li span,
+body.dark-mode .action li i {
+  color: #000 !important;
+}
+
