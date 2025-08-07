@@ -40,7 +40,6 @@
         <div class="inner-main-content">
           <h1>Special Offer</h1>
           <p>Black Pants <br/>$30</p>
-
           <a href="#" class="shopnow-btn">Shop Now</a>
         </div>
       </div>
@@ -101,15 +100,15 @@
   </div>
 </section>
 
-
-<div class="heading" id="Products"><h1><b>Featured Products</b></h1></div>
+<div class="heading" id="Products">
+  <h1><b>Featured Products</b></h1>
+</div>
 
 <div class="name">
   <div class="container">
-    <!-- ✅ Repeat this card block for each product you want to show -->
     <div class="card">
       <div class="imgbx">
-        <img src="images/-473Wx593H-464501984-green-MODEL3.webp" alt="">
+        <img src="images/-473Wx593H-464501984-green-MODEL3.webp">
         <ul class="action">
           <li><i class="fa fa-heart"></i><span>Add to Wishlist</span></li>
           <li><i class="fa fa-shopping-cart"></i><span>Add to Cart</span></li>
@@ -117,7 +116,7 @@
         </ul>
       </div>
       <div class="content">
-        <div class="productname"><h3>High Waist Corduroy Pants</h3></div>
+        <div class="productname"><h3>High Waist Straight Leg Corduroy Pants</h3></div>
         <div class="price_rating">
           <h2>$40.45</h2>
           <div class="rating">
@@ -126,7 +125,66 @@
         </div>
       </div>
     </div>
-    <!-- Add more cards here -->
+
+    <div class="card">
+      <div class="imgbx">
+        <img src="images/0a8e8901bfd746d5ce4aa4cf5f2e099c.jpg">
+        <ul class="action">
+          <li><i class="fa fa-heart"></i><span>Add to Wishlist</span></li>
+          <li><i class="fa fa-shopping-cart"></i><span>Add to Cart</span></li>
+          <li><i class="fa fa-eye"></i><span>View Details</span></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="productname"><h3>Women's Sweet Bowknot High Heels Ankle Boots</h3></div>
+        <div class="price_rating">
+          <h2>$45.23</h2>
+          <div class="rating">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imgbx">
+        <img src="images/1578995627242_19.webp">
+        <ul class="action">
+          <li><i class="fa fa-heart"></i><span>Add to Wishlist</span></li>
+          <li><i class="fa fa-shopping-cart"></i><span>Add to Cart</span></li>
+          <li><i class="fa fa-eye"></i><span>View Details</span></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="productname"><h3>Gold Plated Green Alloy Dangle Earrings For Women</h3></div>
+        <div class="price_rating">
+          <h2>$20.46</h2>
+          <div class="rating">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imgbx">
+        <img src="images/5b5abff2f65c40628bc81d8b71f44002UR_w1000_q90.jpeg">
+        <ul class="action">
+          <li><i class="fa fa-heart"></i><span>Add to Wishlist</span></li>
+          <li><i class="fa fa-shopping-cart"></i><span>Add to Cart</span></li>
+          <li><i class="fa fa-eye"></i><span>View Details</span></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="productname"><h3>Solid Kangaroo Pocket Drawstring Thermal Lined Hoodie</h3></div>
+        <div class="price_rating">
+          <h2>$30.99</h2>
+          <div class="rating">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star grey"></i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -281,7 +339,75 @@
     font-size: 0.95rem;
     color: #bdbdbd;
   }
+
+  /* Back to top button */
+  #backToTop {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: #ffd700;
+    color: #000;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #e0c200;
+  }
 </style>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+  <script>
+  const toggleButton = document.getElementById("theme-toggle");
+  toggleButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      toggleButton.textContent = "Disable Dark Mode";
+    } else {
+      toggleButton.textContent = "Enable Dark Mode";
+    }
+  });
+</script>
+
+<style>
+  .dark-mode {
+    background-color: #121212;
+    color: #f3f3f3;
+  }
+
+  .dark-mode .header,
+  .dark-mode .footer-section {
+    background-color: #1e1e1e;
+  }
+
+  .dark-mode a {
+    color: #ffd700;
+  }
+</style>
+
+
+</body>
+</html>
 
 </body>
 </html>
