@@ -82,9 +82,7 @@ html{
 	color:var(--textcolor);
 	cursor:pointer;
 	gap:12px;
-
- 
-
+}
 body {
   background-color: white;
   color: black;
@@ -96,8 +94,7 @@ body {
 	color:white;
 	border-radius:10px;
 	padding: 1rem 3rem;
-=======
- 
+}
 
 body.dark-mode {
   background-color: #121212;
@@ -532,9 +529,7 @@ letter-spacing: 3px;
     }
     #backToTop:hover {
       background-color: var(--hovercolor);
-    }
-
-
+}
 @media (max-width:768px){
 	html{
 		font-size:50%;
@@ -567,3 +562,19 @@ letter-spacing: 3px;
 		width:45rem;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
