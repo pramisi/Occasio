@@ -1,3 +1,22 @@
+/*about us section*/
+.about-us-section {
+    background-color: #b994b2;
+    color: var(--hovercolor);
+    padding: 5rem 7%;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center; 
+}
+.about-us-section h1 {
+    color: var(--textcolor);
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.about-us-section p {
+    margin-bottom: 1.5rem;
+}
 
 :root{
 	--maincolor: #ffe082;      /* Sunshine Yellow */
@@ -64,13 +83,12 @@ html{
 	cursor:pointer;
 	gap:12px;
 }
-
 body {
   background-color: white;
   color: black;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
- main
+ 
 .icons div:hover{
 	background-color:var(--accentcolor);
 	color:white;
@@ -439,8 +457,8 @@ letter-spacing: 3px;
 	border-radius: 5px;
 	font-weight: 400;
   }
-               
-  
+
+
   /* footer */
   .footer-section {
 	background-color:var(--footercolor);
@@ -492,8 +510,9 @@ letter-spacing: 3px;
   .menu > h1 {
 	margin-bottom: 2rem;
   }
+  
 
- main
+
 /* Back to Top Button */
     #backToTop {
       position: fixed;
@@ -510,11 +529,39 @@ letter-spacing: 3px;
     }
     #backToTop:hover {
       background-color: var(--hovercolor);
-    }
-
-
-
-
+}
+@media (max-width:768px){
+	html{
+		font-size:50%;
+	}
+	#menu-bar{
+		display:inline-block;
+		cursor:pointer;
+	}
+	
+	.header{
+		padding:2rem;
+		
+	}
+	.navbar{
+		position:fixed;
+		top:100%;
+		width: 58rem;
+		background: var(--maincolor);
+	}
+	.navbar.active{
+		display: flex;
+	}
+	.navbar a{
+		display:block;
+		color:white;
+		background: black;
+		margin:3rem;
+		padding: 1.5rem;
+		border-radius: 15px;
+		width:45rem;
+	}
+}
 
 
 
