@@ -42,29 +42,64 @@ section .contact-us-section .contactinfo{
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 20px 20px rgba(0,0,0, 0.2);
+  
     
 }
 section .contact-us-section .contactinfo h2{
     color:#fff;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
+    margin-bottom: 20px;
+   
 }
 section .contact-us-section .contactinfo .info{
     position: relative;
-    margin: 20px 0;}
-section .contact-us-section .contactinfo .info li{
+    margin: 20px 0;
+    
+   
+}
+.contactinfo .box{
+   display: flex;
+  align-items: center; /* vertical alignment */
+  margin: 15px 0;
+   
+    
+}
+
+.contactinfo .box .icon {
+    min-width: 30px;
+  height: 30px;
+  background: #fff;
+  color: #0f3959;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.contactinfo .box .text{
+     color: #fff; /* now white */
+  font-size: 16px;
+  align-items: center;
+}
+/* section .contact-us-section .contactinfo .info li{
     position: relative;
     list-style: none;
     display: flex;
     margin: 20px 0;
     cursor: pointer;
     align-items: flex-start;
+   
 
-}
-section .contact-us-section .contactinfo .info li span:nth-child(1){
+} */
+
+/* section .contact-us-section .contactinfo .info li span:nth-child(1){
 
     width:30px;
     min-width: 30px;
+    background-color: aqua;
 }
 section .contact-us-section .contactinfo .info li span:nth-child(1) img{
     max-width:100%;
@@ -82,8 +117,31 @@ section .contact-us-section .contactinfo .info li:hover span:nth-child(1) img,
 section .contact-us-section .contactinfo .info li:hover span:nth-child(2)
 {
     opacity:1;
+} */
+
+.social-icons {
+  margin-top: 30px; 
+ 
 }
-section .contact-us-section .contactinfo .sci{
+
+.social-icons a {
+ display: inline-block;
+  width: 30px; /* square size */
+  height: 30px;
+  line-height: 30px; /* center icon vertically */
+  border: 2px solid #fff; /* border color */
+  margin: 0 8px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00bcd4; /* hover color */
+  transform: scale(1.2);
+}
+/* section .contact-us-section .contactinfo .sci{
     position: relative;
     display: flex;
 }
@@ -101,7 +159,7 @@ section .contact-us-section .contactinfo .sci li a img{
 }
 section .contact-us-section .contactinfo .sci li:hover a img{
     opacity: 1;
-}
+} */
 section .contact-us-section .contactForm{
     position:absolute;
     padding: 70px 50px;
