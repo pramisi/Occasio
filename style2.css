@@ -1,134 +1,238 @@
-*
-{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
-}
-body
-{
-    display:flex;
-    justify-content: center;
-    align-content: center;
-    min-height:100vh;
-    background: #dcdcdc;
-}
-.container{
-	position:relative;
-	width:1200px;
-	display:grid;
-	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-	grid-gap: 20px;
-	padding:20px;
+:root{
+  --accentcolor: #f06292;
+  --textcolor: #212121;
+  --background: #dcdcdc;
 }
 
-.container .card{
-	width:100%;
-	background: #fff;
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease;
 }
-.container .card .imgbx{
-	position:relative;
-	width:100%;
-	height:355px;
-	overflow: hidden;
-}
-.container .card .imgbx img{
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	object-fit:cover;
-	transition:0.5% ease-in-out;
-	transform-origin: right;
-}
-.container .card:hover .imgbx img{
-	transform:scale(1.3);
 
+body {
+  background: var(--background);
+  color: var(--textcolor);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.action{
-	position: absolute;
-	top:10px;
-	right:10px;
-}
-.action li{
-	position: relative;
-	list-style:none;
-	width:40px;
-	height:40px;
-	background:#fff;
-	display:flex;
-	justify-content: center;
-	align-items:center;
-	margin:4px;
-	cursor:pointer;
-	transition:transform 0.5%;
-	transform:translateX(60px);
-	
 
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 2rem 7%;
+  background: var(--accentcolor);
+  margin-bottom:170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-.action li:nth-child(2){
-	transition-delay: 0.15%;
+
+.header #logo {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
-.action li:nth-child(3){
-	transition-delay: 0.3%;
+
+.navbar a {
+  color: white;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
 }
-.container .card:hover .action li{
-	transform: translateX(0px);
+
+.navbar a.active {
+  background: #d73a6e;
+  box-shadow: 0 4px 12px rgba(215, 58, 110, 0.7);
 }
-.action li:hover{
-	background: #ff2020;
-	color:#fff;
+
+.page-title {
+  margin: 10rem 0 3rem 0;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--accentcolor);
+  text-align: center;
+  width: 100%;
 }
-.action li span{
-	position:absolute;
-	right:50px;
-	top:50%;
-	transform:translateY(-50%) translateX(-20px);
-	white-space: nowrap;
-	padding:4px 60px;
-	background: #fff;
-	color:#333;
-	font-weight: 500;
-	font-size: 12px;
-	border-radius:none;
-	opacity:0;
-	transition: 0.5%;
+
+.main div{
+	margin-top: 100px;
 }
+.container {
+  width: 85%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+  grid-gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+
+.card{
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px rgba(240, 98, 146, 0.35);
+}
+
+.imgbx {
+  position: relative;
+  width: 100%;
+  height: 355px;
+  overflow: hidden;
+}
+
+.imgbx img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0; left: 0;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .imgbx img {
+  transform: scale(1.1);
+}
+
+.action {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transform: translateX(60px);
+  transition: transform 0.5s ease;
+}
+
+.card:hover .action {
+  transform: translateX(0px);
+}
+
+.action li {
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: var(--textcolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.action li:hover {
+  background: var(--accentcolor);
+  color: white;
+}
+
+.action li span {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px);
+  white-space: nowrap;
+  padding: 4px 60px;
+  background: white;
+  color: var(--textcolor);
+  font-weight: 600;
+  font-size: 1.3rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  border-radius: 0;
+}
+
 .action li:hover span {
-	transform:translateY(-50%) translateX(0px);
-	opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
-.action li span::before{
-	content: '';
-	position: absolute;
-	top:50%;
-	right:-4px;
-	width:8px;
-	height:8px;
-	background: #fff;
-	transform: translateY(-50%) rotate(45deg);
+
+.action li span::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  top: 50%;
+  right: -4px;
+  transform: translateY(-50%) rotate(45deg);
 }
-.container .card .content .productname h3{
-	font-size: 18px;
-	font-weight: 500;
-	color: #333;
-	margin:5px 0;
+
+.content {
+  padding: 1rem 1.5rem;
 }
-.container .card .content .price_rating{
-	display:flex;
-	justify-content: space-between;
-	align-items:center;
+
+.productname h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
 }
-.container .card .content .price_rating h2{
-	font-size:20px;
-	color:#ff2020;
-	font-weight: 500;
+
+.price_rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.container .card .content .price_rating .fa{
-	color:#ffd513;
-	cursor:pointer;
+
+.price_rating h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accentcolor);
 }
-.container .card .content .price_rating .fa.grey{
-	color: #ccc;
+
+.price_rating .fa {
+  color: #ffd513;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.price_rating .fa.grey {
+  color: #ccc;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .navbar {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  .navbar a {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+  }
+  .container {
+    width: 95%;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  }
 }
