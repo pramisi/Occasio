@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>e-commerce</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-		integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" type="text/css" href="style1.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Occasio - E-commerce</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style1.css" />
 </head>
-
 <body>
+
 	<header class="header">
 		<a href="#" id="logo">Occasio</a>
 		<nav class="navbar" id="navbar">
@@ -350,170 +347,108 @@
 					</footer>
 
 
-					<!-- Back to Top Button -->
-					<button id="backToTop" title="Go to top">↑</button>
 
-					<!-- JavaScript -->
-					<script>
-						const backToTopBtn = document.getElementById("backToTop");
 
-						window.onscroll = function () {
-							if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-								backToTopBtn.style.display = "block";
-							} else {
-								backToTopBtn.style.display = "none";
-							}
-						};
+<header class="header">
+  <a href="#" id="logo">Occasio</a>
+  <nav class="navbar">
+    <a href="e-commerce.html">Home</a>
+    <a href="#">About</a>
+    <a href="#Products">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="icons">
+    <div class="fa fa-bars" id="menu-bar"></div>
+    <div class="fa fa-shopping-cart" id="shop-cart"></div>
+    <div class="fa fa-search" id="search-bar"></div>
+    <button id="theme-toggle" class="button" style="position:absolute; top:20px; right:20px;">Enable Dark Mode</button>
+    <a href="profile.html" style="position:absolute; top:20px; right:180px; color:#000; font-size:24px;">
+      <i class="fa fa-user" aria-hidden="true"></i>
+    </a>
+  </div>
+</header>
 
-						backToTopBtn.addEventListener("click", function () {
-							window.scrollTo({ top: 0, behavior: 'smooth' });
-						});
-					</script>
+<section class="home" id="home">
+  <div class="content">
+    <h3>Fresh And Organic Products For You</h3>
+    <p>Best quality organic products at affordable prices</p>
+    <a href="#Products" class="btn">Shop Now</a>
+  </div>
+</section>
 
-					<!-- Enhanced Footer Styles -->
-					<style>
-						.enhanced-footer {
-							background: #222;
-							color: #f3f3f3;
-							font-family: 'Segoe UI', Arial, sans-serif;
-							font-size: 1.4em;
-							padding: 40px 20px 10px 20px;
-							margin-top: 40px;
-						}
+<section class="products" id="Products">
+  <h1 class="heading">Our <span>Products</span></h1>
+  <div class="box-container">
 
-						.footer-brand {
-							text-align: center;
-							margin-bottom: 20px;
-						}
+    <div class="box">
+      <img src="img/product1.jpg" alt="Product 1">
+      <h3>Fresh Apples</h3>
+      <p>₹150 / kg</p>
+      <button class="btn">Add to Cart</button>
+    </div>
 
-						.footer-brand h1 {
-							font-size: 2.2rem;
-							letter-spacing: 2px;
-							margin-bottom: 5px;
-						}
+    <div class="box">
+      <img src="img/product2.jpg" alt="Product 2">
+      <h3>Organic Bananas</h3>
+      <p>₹50 / dozen</p>
+      <button class="btn">Add to Cart</button>
+    </div>
 
-						.footer-brand .tagline {
-							font-size: 1.1rem;
-							color: #bdbdbd;
-							margin-bottom: 10px;
-						}
+    <div class="box">
+      <img src="img/product3.jpg" alt="Product 3">
+      <h3>Fresh Carrots</h3>
+      <p>₹60 / kg</p>
+      <button class="btn">Add to Cart</button>
+    </div>
 
-						.footer-main {
-							display: flex;
-							flex-wrap: wrap;
-							justify-content: space-between;
-							gap: 30px;
-							max-width: 1100px;
-							margin: 0 auto;
-						}
+  </div>
+</section>
 
-						.footer-column {
-							flex: 1 1 200px;
-							min-width: 180px;
-							margin-bottom: 20px;
-						}
+<button id="backToTop" title="Go to top">↑</button>
 
-						.footer-column h2 {
-							font-size: 1.1rem;
-							margin-bottom: 12px;
-							color: #ffd700;
-							letter-spacing: 1px;
-						}
+<footer class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Occasio</h3>
+      <p>Your one-stop shop for fresh and organic products.</p>
+    </div>
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="e-commerce.html">Home</a>
+      <a href="#">About</a>
+      <a href="#Products">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <p><i class="fa fa-phone"></i> +91 9876543210</p>
+      <p><i class="fa fa-envelope"></i> support@occasio.com</p>
+      <p><i class="fa fa-map-marker"></i> Hyderabad, India</p>
+    </div>
+  </div>
+  <div class="credit">© 2025 Occasio. All Rights Reserved.</div>
+</footer>
 
-						.footer-links,
-						.contact-info {
-							list-style: none;
-							padding: 0;
-							margin: 0;
-						}
+<script>
+  // Dark mode toggle
+  document.getElementById("theme-toggle").addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+    this.textContent = document.body.classList.contains("dark-mode") ? "Disable Dark Mode" : "Enable Dark Mode";
+  });
 
-						.footer-links li,
-						.contact-info li {
-							margin-bottom: 10px;
-						}
+  // Back to top button
+  const backToTop = document.getElementById("backToTop");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 
-						.footer-links a {
-							color: #f3f3f3;
-							text-decoration: none;
-							transition: color 0.2s;
-							font-size: 1.15rem;
-						}
-
-						.footer-links a:hover {
-							color: #ffd700;
-							text-decoration: underline;
-						}
-
-						.contact-info a {
-							color: #f3f3f3;
-							text-decoration: none;
-							margin-left: 5px;
-							font-size: 1.15rem;
-						}
-
-						.contact-info a:hover {
-							color: #ffd700;
-							text-decoration: underline;
-						}
-
-						.contact-info i {
-							margin-right: 6px;
-							color: #ffd700;
-						}
-
-						.social-icons a {
-							margin-right: 10px;
-							font-size: 1.6rem;
-							color: #f3f3f3;
-							transition: color 0.2s;
-						}
-
-						.social-icons a:hover {
-							color: #ffd700;
-						}
-
-						.occasion-filter label {
-							display: block;
-							margin-bottom: 7px;
-							font-size: 1.15rem;
-							cursor: pointer;
-						}
-
-						.occasion-filter input[type="checkbox"] {
-							accent-color: #ffd700;
-							margin-right: 6px;
-						}
-
-						.footer-divider {
-							border-top: 1px solid #444;
-							margin: 25px 0 10px 0;
-						}
-
-						.footer-bottom {
-							text-align: center;
-							font-size: 0.95rem;
-							color: #bdbdbd;
-							margin-bottom: 0;
-						}
-
-						@media (max-width: 800px) {
-							.footer-main {
-								flex-direction: column;
-								align-items: center;
-								gap: 0;
-							}
-
-							.footer-column {
-								min-width: 220px;
-								width: 100%;
-								margin-bottom: 25px;
-								text-align: center;
-							}
-						}
-					</style>
-
-				</div>
-				<script src="profile.js"></script>
 </body>
-
 </html>
