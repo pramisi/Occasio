@@ -9,28 +9,32 @@
     <!-- ADD THIS LINE -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" type="text/css" href="dark-mode.css">
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" id="logo">Occasio</a>
-        <nav class="navbar" id="navbar">
-            <a href="index.html">Home</a>
-            <a href="#">About</a>
-            <a href="#Products">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <div class="icons">
-            <div class="hamburger-icon">
-                &#9776;
-            </div>
-            <div class="fa fa-shopping-cart" id="shop-cart"></div>
-            <div class="fa fa-search" id="search-bar"></div>
-            <div class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
-                <i class="bi bi-brightness-high-fill" id="themeIcon"></i>
-            </div>
-        </div>
-    </header>
+		<button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode" style="position:fixed; top:20px; right:20px; z-index:9999; background:#fff; color:#232323; border-radius:50%; border:2px solid #232323; width:48px; height:48px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(0,0,0,0.15); font-size:1.7em; transition:background 0.2s, color 0.2s;">
+			<i class="bi bi-brightness-high-fill" id="themeIcon"></i>
+		</button>
+		<header class="header">
+		<a href="#" id="logo">Occasio</a>
+		<nav class="navbar" id="navbar">
+			<a href="index.html">Home</a>
+			<a href="#">About</a>
+			<a href="#Products">Products</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+		<div class="icons">
+			<div class="hamburger-icon">
+				&#9776;
+			</div>
+			<div class="fa fa-shopping-cart" id="shop-cart"></div>
+			<div class="fa fa-search" id="search-bar"></div>
+			<button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode" style="background:none;border:none;cursor:pointer;font-size:1.5em;">
+				<i class="bi bi-brightness-high-fill" id="themeIcon"></i>
+			</button>
+		</div>
+	</header>
 
 	<header class="header">
 		<a href="#" id="logo">Occasio</a>
@@ -528,6 +532,40 @@
 
 				</div>
 				<script src="profile.js"></script>
+<script>
+// Dark mode toggle logic
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const darkClass = 'dark-mode';
+
+function setDarkMode(enabled) {
+	if (enabled) {
+		document.documentElement.classList.add(darkClass);
+		themeIcon.classList.remove('bi-brightness-high-fill');
+		themeIcon.classList.add('bi-moon-fill');
+		themeToggle.style.background = '#232323';
+		themeToggle.style.color = '#f1f1f1';
+		themeToggle.style.borderColor = '#f1f1f1';
+	} else {
+		document.documentElement.classList.remove(darkClass);
+		themeIcon.classList.remove('bi-moon-fill');
+		themeIcon.classList.add('bi-brightness-high-fill');
+		themeToggle.style.background = '#fff';
+		themeToggle.style.color = '#232323';
+		themeToggle.style.borderColor = '#232323';
+	}
+}
+
+// Load preference
+const darkPref = localStorage.getItem('darkMode') === 'true';
+setDarkMode(darkPref);
+
+themeToggle.addEventListener('click', () => {
+	const isDark = document.documentElement.classList.toggle(darkClass);
+	localStorage.setItem('darkMode', isDark);
+	setDarkMode(isDark);
+});
+</script>
 </body>
 
 </html>
