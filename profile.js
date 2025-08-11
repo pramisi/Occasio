@@ -177,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Order search functionality
+
   const orderSearch = document.getElementById("order-search");
   if (orderSearch) {
     orderSearch.addEventListener("input", function () {

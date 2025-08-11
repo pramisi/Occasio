@@ -10,16 +10,23 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="style1.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+	<style>
+		.size{
+			font-size: 18px;
+			color: #222;
+			font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		}
+	</style>
 </head>
 
 <body>
 	<header class="header">
 		<a href="#" id="logo">Occasio</a>
 		<nav class="navbar" id="navbar">
-			<a href="e-commerce.html">Home</a>
-			<a href="#">About</a>
-			<a href="#Products">Products</a>
-			<a href="contact.html">Contact</a>
+			<a href="e-commerce.html" class = "size">Home</a>
+			<a href="#" class = "size">About</a>
+			<a href="#Products" class = "size">Products</a>
+			<a href="contact.html" class = "size">Contact</a>
 		</nav>
 		<div class="icons">
 			<div class="hamburger-icon">
@@ -30,6 +37,8 @@
 			<div class="theme">
 				<i title="Toggle to Change theme" class="bi bi-brightness-high-fill" id="toggleDark"></i>
 			</div>
+			<input type = "text" id="search-box" placeholder="Search..."/>
+		</div>
 		</div>
 	</header>
 
