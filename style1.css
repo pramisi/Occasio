@@ -1,7 +1,7 @@
 :root {
   --maincolor: #ffe082; /* Sunshine Yellow */
   --accentcolor: #f06292; /* Bubblegum Pink */
-  --textcolor: #212121; /* Dark Gray */
+  --textcolor: #282121; /* Dark Gray */
   --hovercolor: #424242; /* Muted Black */
   --footercolor: #212121; /* Footer Background */
 }
@@ -27,14 +27,15 @@ html {
   right: 0;
   display: flex;
   align-items: center;
-  padding: 3px 20px;
-  background-color: var(--primarycolor, #373737);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  padding: 3px 50px;
+  background-color: var(--primarycolor, rgb(240, 98, 146));
+  box-shadow: rgba(29, 1, 1, 0.592) 0px 5px 15px;
   z-index: 100000;
   width: 60%;
   justify-self: center;
   border-radius: 50px;
   align-items: center;
+  
 }
 .header nav {
   display: inline-flex;
@@ -43,11 +44,12 @@ html {
   justify-content: center;
   height: 41px;
   align-items: center;
+  color: #121212;
 }
 .hamburger-icon {
   display: none;
-  font-size: 28px;
-  color: white; /* or your preferred color */
+  font-size: 38px;
+  color: rgb(255, 255, 255); /* or your preferred color */
   cursor: pointer;
 }
 
@@ -61,49 +63,6 @@ html {
   font-weight: bold;
 }
 
-.navbar a {
-  color: white;
-  font-size: 16px;
-  margin-left: 1rem;
-  gap: 10px;
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  height: 100%;
-  border-radius: 30px;
-  width: 25%;
-  padding: 7px 12px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.25s ease-in-out;
-  border: none;
-}
-
-.navbar a:hover {
-  background-color: var(--accentcolor);
-  border-radius: 30px;
-  padding: 7px 12px;
-  background-color: #7364ff;
-  border: 1px solid #001bff;
-}
-.icons {
-  display: inline-flex;
-  width: 20%;
-  height: 50px;
-  padding: 7px 12px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.icons div {
-  font-size: 2rem;
-  margin-left: 1rem;
-  color: var(--textcolor);
-  cursor: pointer;
-  gap: 12px;
-}
 
 body {
   background-color: white;
@@ -112,8 +71,24 @@ body {
 }
 
 .icons div {
-  color: white;
+  color: rgb(0, 0, 0);
+  width: 20px;
+  height: 20px;
+  display:inline;
+  align-items: 10px;
+  font-size:x-large;
 }
+
+#search-box{
+  display:flex;
+  padding: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  outline: none;
+  margin-left: 8px;
+  font-size: 14px;
+}
+
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
@@ -586,4 +561,5 @@ body.dark-mode .navbar a:hover {
     color: white;
     cursor: pointer;
   }
+
 }
