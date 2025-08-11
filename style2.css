@@ -132,3 +132,144 @@ body
 .container .card .content .price_rating .fa.grey{
 	color: #ccc;
 }
+/* ==================== PAGE TITLE STYLES ==================== */
+.page-title {
+    text-align: center;
+    padding: 120px 2rem 3rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.page-title h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-title p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Page Title */
+body.dark-mode .page-title {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+/* Ensure container has proper spacing */
+.container {
+    padding-top: 2rem;
+    min-height: calc(100vh - 300px);
+    margin-top: 0;
+}
+
+/* Responsive Page Title */
+@media (max-width: 768px) {
+    .page-title {
+        padding: 100px 1rem 2rem 1rem;
+    }
+    
+    .page-title h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-title p {
+        font-size: 1rem;
+    }
+}
+
+/* ==================== ADDITIONAL DARK MODE FIXES ==================== */
+
+/* Ensure body background is applied */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    min-height: 100vh;
+}
+
+/* Dark mode for product cards in style2.css */
+body.dark-mode .card {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+    transform: translateY(-5px);
+}
+
+body.dark-mode .card .content h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card .content h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card .productname h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card .price_rating h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card .rating i {
+    color: #ffd700 !important;
+}
+
+body.dark-mode .card .rating i.grey {
+    color: #666 !important;
+}
+
+body.dark-mode .card .action {
+    background-color: #2a2a2a !important;
+}
+
+body.dark-mode .card .action li {
+    background-color: #333 !important;
+    color: #ffffff !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .card .action li:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+body.dark-mode .card .action span {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card .action li:hover span {
+    color: #000000 !important;
+}
+
+body.dark-mode .card .action li i {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card .action li:hover i {
+    color: #000000 !important;
+}
