@@ -478,52 +478,14 @@ body.dark-mode .navbar a:hover {
 .footer-section {
   background-color: var(--footercolor);
   color: white;
+  font-size: 18px;
 }
-.footer-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem 1rem;
+.footer-section p {
+  text-align: center;
 }
 
-.footer-container a {
-  color: white;
-}
-
-.footer-container a:hover {
+.footer-section a:hover {
   color: var(--accentcolor);
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  /* margin: 1rem; */
-}
-.menu-items {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.menu-items > i {
-  font-size: 40px;
-  margin-bottom: 0.5rem;
-}
-.menu-items > a {
-  text-decoration: none;
-  color: white;
-  font-weight: 400;
-  font-size: 15px;
-  margin-bottom: 0.5rem;
-}
-.menu-items i:hover {
-  color: #f06292;
-}
-.menu > h1 {
-  margin-bottom: 2rem;
 }
 
 /* Back to Top Button */
