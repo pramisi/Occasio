@@ -1,0 +1,314 @@
+:root {
+  --maincolor: #f06292;
+  --backgroundcolor: #fdf6f9;
+  --textcolor: #2d2d2d;
+  --accentcolor: #ff4081;
+  --buttoncolor: var(--maincolor);
+  --buttonhover: #d73a6e;
+  --shadowcolor: rgba(240, 98, 146, 0.2);
+  --darkbackground: #1c1c1e;
+  --darktext: #e0e0e0;
+}
+
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--backgroundcolor);
+  color: var(--textcolor);
+  padding: 4rem 2rem 6rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  line-height: 1.6;
+}
+
+.main-content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.occasio-heading {
+  font-size: 5.2rem;
+  font-weight: 800;
+  letter-spacing: 0.8rem;
+  color: var(--maincolor);
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  user-select: none;
+  text-shadow: 1px 1px 3px var(--shadowcolor);
+}
+
+.o-letter {
+  color: var(--accentcolor);
+  font-weight: 900;
+}
+
+.occasio-tagline {
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-top: 0.8rem;
+  color: #777;
+  font-style: italic;
+  letter-spacing: 0.05rem;
+}
+
+/* Dark Mode toggle button */
+#darkModeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--buttoncolor);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#darkModeToggle:hover {
+  background-color: var(--buttonhover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadowcolor);
+}
+
+/* Universal Button */
+.button, button {
+  display: inline-block;
+  background: var(--buttoncolor);
+  color: white;
+  border: none;
+  padding: 1.2rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 15px var(--shadowcolor);
+}
+
+.button:hover, button:hover {
+  background-color: var(--buttonhover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--shadowcolor);
+}
+
+/* About Card Section */
+.container, .about-card {
+  background: white;
+  box-shadow: 0 15px 40px var(--shadowcolor);
+  display: flex;
+  align-items: stretch;
+  border-radius: 30px;
+  padding: 3.5rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto 4rem;
+  max-width: 1200px;
+}
+
+.about-img {
+  width: 350px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-img:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px var(--shadowcolor);
+}
+
+.about-content {
+  flex: 1;
+  padding: 2.5rem;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--textcolor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-content h3 {
+  font-size: 2.8rem;
+  color: var(--accentcolor);
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+.about-icon {
+  font-size: 3rem;
+  color: var(--maincolor);
+}
+
+.about-content p {
+  margin-bottom: 1.6rem;
+  font-weight: 300;
+}
+
+/* Shop Now Section */
+div[style*="text-align:center"] {
+  margin: 5rem 0 7rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 3rem 1rem;
+  color: #666;
+  border-top: 1px solid #eee;
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: var(--maincolor);
+  margin: 0 1rem;
+  font-size: 2.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accentcolor);
+  transform: translateY(-2px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: var(--darkbackground);
+  color: var(--darktext);
+}
+
+body.dark-mode header .occasio-heading,
+body.dark-mode header .occasio-tagline,
+body.dark-mode .about-content p {
+  color: #f8a1c4;
+}
+
+body.dark-mode .container,
+body.dark-mode .about-card {
+  background-color: #2c2c2e;
+  box-shadow: 0 15px 40px rgba(244, 143, 177, 0.3);
+}
+
+body.dark-mode footer {
+  border-top: 1px solid #555;
+  color: #aaa;
+}
+
+body.dark-mode footer a {
+  color: #f8a1c4;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .occasio-heading {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .occasio-tagline {
+    font-size: 1.4rem;
+  }
+
+  .container, .about-card {
+    flex-direction: column;
+    padding: 2.5rem;
+  }
+
+  .about-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .about-content {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .about-content h3 {
+    font-size: 2.4rem;
+  }
+
+  #darkModeToggle {
+    position: static;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .occasio-heading {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .occasio-tagline {
+    font-size: 1.2rem;
+  }
+
+  .about-content h3 {
+    font-size: 2rem;
+  }
+
+  .about-img {
+    height: 200px;
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+  }
+}
