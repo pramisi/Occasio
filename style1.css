@@ -61,55 +61,27 @@ html {
   font-weight: bold;
 }
 
-.navbar a {
-  color: white;
-  font-size: 16px;
-  margin-left: 1rem;
-  gap: 10px;
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  height: 100%;
-  border-radius: 30px;
-  width: 25%;
-  padding: 7px 12px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.25s ease-in-out;
-  border: none;
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  border-radius: 8px; /* Rounded corners */
+}
+img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.navbar a:hover {
-  background-color: var(--accentcolor);
-  border-radius: 30px;
-  padding: 7px 12px;
-  background-color: #7364ff;
-  border: 1px solid #001bff;
-}
-.icons {
-  display: inline-flex;
-  width: 20%;
-  height: 50px;
-  padding: 7px 12px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.icons div {
-  font-size: 2rem;
-  margin-left: 1rem;
-  color: var(--textcolor);
-  cursor: pointer;
-  gap: 12px;
-}
 
 body {
   background-color: white;
   color: black;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 .icons div {
   color: white;
@@ -586,4 +558,4 @@ body.dark-mode .navbar a:hover {
     color: white;
     cursor: pointer;
   }
-}
+
