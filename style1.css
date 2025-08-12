@@ -61,48 +61,7 @@ html {
   font-weight: bold;
 }
 
-.navbar a {
-  color: white;
-  font-size: 16px;
-  margin-left: 1rem;
-  gap: 10px;
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  height: 100%;
-  border-radius: 30px;
-  width: 25%;
-  padding: 7px 12px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.25s ease-in-out;
-  border: none;
-}
 
-.navbar a:hover {
-  background-color: var(--accentcolor);
-  border-radius: 30px;
-  padding: 7px 12px;
-  background-color: #7364ff;
-  border: 1px solid #001bff;
-}
-.icons {
-  display: inline-flex;
-  width: 20%;
-  height: 50px;
-  padding: 7px 12px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.icons div {
-  font-size: 2rem;
-  margin-left: 1rem;
-  color: var(--textcolor);
-  cursor: pointer;
-  gap: 12px;
 }
 
 body {
@@ -110,6 +69,7 @@ body {
   color: black;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 .icons div {
   color: white;
@@ -259,11 +219,12 @@ body.dark-mode .navbar a:hover {
 }
 .gallery {
   padding: 1rem 7%;
+   height: 60rem;
 }
 .gallery h1 {
   font-size: 40px;
   text-align: center;
-  padding: 1rem 0;
+  padding: 4rem 0;
 }
 .main-gallery {
   display: flex;
@@ -276,15 +237,36 @@ body.dark-mode .navbar a:hover {
   flex: 1 1 200px;
   padding-left: 0px;
   padding-right: 3px;
+  padding: 0.1rem;
+
 }
 .inner-gallery img {
-  width: 80%;
+  width: 90%;
+  height: 100%;
+  border-radius: 30px;
 }
+
+.h {
+  padding: 0.9rem;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 10px;
+
+}
+
+.h:hover {
+  width: 94%;
+
+}
+
+
+
 #girlimg {
   height: 300px;
   width: 300px;
   border-radius: 30px;
 }
+
 #img1 {
   border-radius: 30px;
 }
@@ -548,4 +530,4 @@ body.dark-mode .navbar a:hover {
     color: white;
     cursor: pointer;
   }
-}
+
