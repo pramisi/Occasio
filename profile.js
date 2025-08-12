@@ -594,3 +594,131 @@ hamburgerIcon.addEventListener("click", () => {
     navbar.style.display = "block";
   }
 });
+// ==================== DARK MODE FUNCTIONALITY ====================
+// Add this at the END of your existing profile.js file
+
+// Dark Mode Toggle Implementation
+(function() {
+    // Wait for DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+        
+        // Only proceed if theme toggle exists on this page
+        if (!themeToggle || !themeIcon) {
+            console.log('Dark mode toggle not found on this page');
+            return;
+        }
+        
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('occasio-theme') || 'light';
+        console.log('Current theme:', currentTheme);
+        
+        // Apply saved theme on page load
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            updateThemeIcon(true);
+        }
+        
+        // Theme toggle event listener
+        themeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Theme toggle clicked');
+            
+            // Toggle dark mode class
+            body.classList.toggle('dark-mode');
+            
+            const isDarkMode = body.classList.contains('dark-mode');
+            console.log('Is dark mode:', isDarkMode);
+            
+            // Save theme preference to localStorage
+            localStorage.setItem('occasio-theme', isDarkMode ? 'dark' : 'light');
+            
+            // Update icon
+            updateThemeIcon(isDarkMode);
+            
+            // Show notification
+            showThemeNotification(isDarkMode);
+        });
+        
+        // Update theme icon function
+        function updateThemeIcon(isDarkMode) {
+            if (isDarkMode) {
+                themeIcon.className = 'bi bi-moon-fill';
+                themeToggle.title = 'Switch to Light Mode';
+            } else {
+                themeIcon.className = 'bi bi-brightness-high-fill';
+                themeToggle.title = 'Switch to Dark Mode';
+            }
+        }
+        
+        // Show theme change notification
+        function showThemeNotification(isDarkMode) {
+            const message = isDarkMode ? '🌙 Dark mode enabled' : '☀️ Light mode enabled';
+            
+            // Remove any existing notifications
+            const existingNotification = document.querySelector('.theme-notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'theme-notification';
+            notification.textContent = message;
+            
+            // Style the notification
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${isDarkMode ? '#333' : '#000'};
+                color: ${isDarkMode ? '#fff' : '#fff'};
+                padding: 0.75rem 1.5rem;
+                border-radius: 8px;
+                z-index: 10001;
+                font-size: 0.9rem;
+                font-weight: 500;
+                opacity: 0;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                transform: translateX(100%);
+                pointer-events: none;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+                border: 1px solid ${isDarkMode ? '#555' : '#333'};
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Show notification with animation
+            setTimeout(() => {
+                notification.style.opacity = '1';
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Hide and remove notification
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 2500);
+        }
+        
+        // Initialize theme on page load
+        console.log('Dark mode initialized');
+    });
+    
+    // Also check theme immediately for faster loading
+    const savedTheme = localStorage.getItem('occasio-theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+})();
+
+// ==================== END DARK MODE FUNCTIONALITY ====================
