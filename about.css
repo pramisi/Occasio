@@ -1,0 +1,205 @@
+/* About Page - Premium Styling */
+#about-cont {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+    color: #2d2d2d;
+    line-height: 1.8;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .about-start h1 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    background: linear-gradient(45deg, #6e45e2, #88d3ce);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 1rem;
+    position: relative;
+  }
+  
+  .about-start h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #6e45e2, #88d3ce);
+    border-radius: 2px;
+  }
+  
+  .welcome p {
+    font-size: 1.7rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+    max-width: 800px;
+    color: #444;
+    font-weight: 400;
+  }
+  
+  .choose, .mission {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .choose:hover, .mission:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  }
+  
+  .choose h2, .mission h2 {
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 1rem;
+  }
+  
+  .choose h2::after, .mission h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+    border-radius: 3px;
+  }
+  
+  .choose h3 {
+    font-size: 2rem;
+    margin: 2.5rem 0 1.5rem;
+    color: #3a3a3a;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+  }
+  
+  .choose p {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    padding-left: 2.5rem;
+    color: #555;
+  }
+  
+  .choose ul {
+    margin: 1.5rem 0 2.5rem 2.5rem;
+    padding-left: 1rem;
+    list-style-type: none;
+  }
+  
+  .choose li {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    background: rgba(110, 69, 226, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .choose li:hover {
+    background: rgba(110, 69, 226, 0.1);
+    transform: translateX(5px);
+  }
+  
+  .mission p {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  
+  .mission p::before {
+    content: "✓";
+    color: white;
+    background: #6e45e2;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .about-start h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #about-cont {
+      padding: 0 1.5rem;
+      margin: 3rem auto;
+    }
+    
+    .about-start h1 {
+      font-size: 2.5rem;
+    }
+    
+    .welcome p {
+      font-size: 1.3rem;
+    }
+    
+    .choose, .mission {
+      padding: 2.5rem;
+    }
+    
+    .choose h2, .mission h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .about-start h1 {
+      font-size: 2.2rem;
+    }
+    
+    .choose, .mission {
+      padding: 2rem 1.5rem;
+    }
+    
+    .choose h3 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .choose li {
+      font-size: 1.1rem;
+    }
+    
+    .mission p {
+      font-size: 1.2rem;
+    }
+  }
