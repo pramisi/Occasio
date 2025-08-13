@@ -59,6 +59,11 @@ Designed for individuals who value **individuality, confidence, and quality**, O
 | JavaScript     | Website interactivity            |
 | Git & GitHub   | Version control & contributions  |
 
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
 ---
 
 ## 🤝 How to Contribute
