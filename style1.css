@@ -405,9 +405,22 @@ body.dark-mode .navbar a:hover {
   color: #ccc;
 }
 .category-product > img {
-  width: 197px;
+  width: 29rem;
   border-radius: 60%;
   margin-bottom: 1rem;
+  height: 34rem;
+ transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+ border-radius: 60%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.category-product > img:hover{
+  width: 30rem;
+
+}
+.category-product{
+    padding: 0.7rem;
+   margin: 2rem;
+
 }
 .categories-section {
   display: flex;
@@ -422,6 +435,8 @@ body.dark-mode .navbar a:hover {
   font-weight: bold;
   font-size: 50px;
   color: var(--accentcolor);
+
+  margin: 4rem;
 }
 
 .category-product button {
@@ -439,7 +454,7 @@ body.dark-mode .navbar a:hover {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 70%;
+  width: 90%;
 }
 .category-product > h6 {
   font-size: 20px;
