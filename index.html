@@ -589,18 +589,16 @@
 
 	<div class="footer-section enhanced-footer">
 		<div class="footer-brand">
-			<h1>Occasio</h1>
+			<h1 style="font-size: 3.5rem;
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;" >Occasio</h1>
 			<p class="tagline">Your style, your story.</p>
 		</div>
-		<div class="footer-main">
-			<div class="footer-column">
-				<h2>Filter by Occasion</h2>
-				<form class="occasion-filter">
-					<label><input type="checkbox" name="occasion" value="party"> Party Wear</label><br>
-					<label><input type="checkbox" name="occasion" value="casual"> Casual</label><br>
-					<label><input type="checkbox" name="occasion" value="formal"> Formal</label>
-				</form>
-			</div>
+		
 			<div class="footer-column">
 				<h2>Products</h2>
 				<ul class="footer-links">
@@ -620,10 +618,10 @@
 					<li><a href="contact.html">Contact</a></li>
 					<li><a href="#">FAQs</a></li>
 				</ul>
-				main
+				
 			</div>
 			<div class="footer-column">
-				<h2>Contact</h2>
+				<h2>Contact Us</h2>
 				<ul class="contact-info">
 					<li><i class="fa fa-envelope"></i> <a href="mailto:info@occasio.com">info@occasio.com</a>
 					</li>
@@ -637,6 +635,64 @@
 						</div>
 
 					</footer>
+					<style>
+.footer-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: #1e1e1e;
+    color: #fff;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    font-size: 3.5rem;
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.footer-column h2 {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.footer-links,
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li,
+.contact-info li {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #FFD700;
+}
+
+.footer-copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+
 
 
 
@@ -696,87 +752,3 @@
   </div>
 </header>
 
-<section class="home" id="home">
-  <div class="content">
-    <h3>Fresh And Organic Products For You</h3>
-    <p>Best quality organic products at affordable prices</p>
-    <a href="#Products" class="btn">Shop Now</a>
-  </div>
-</section>
-
-<section class="products" id="Products">
-  <h1 class="heading">Our <span>Products</span></h1>
-  <div class="box-container">
-
-    <div class="box">
-      <img src="img/product1.jpg" alt="Product 1">
-      <h3>Fresh Apples</h3>
-      <p>₹150 / kg</p>
-      <button class="btn">Add to Cart</button>
-    </div>
-
-    <div class="box">
-      <img src="img/product2.jpg" alt="Product 2">
-      <h3>Organic Bananas</h3>
-      <p>₹50 / dozen</p>
-      <button class="btn">Add to Cart</button>
-    </div>
-
-    <div class="box">
-      <img src="img/product3.jpg" alt="Product 3">
-      <h3>Fresh Carrots</h3>
-      <p>₹60 / kg</p>
-      <button class="btn">Add to Cart</button>
-    </div>
-
-  </div>
-</section>
-
-<button id="backToTop" title="Go to top">↑</button>
-
-<footer class="footer">
-  <div class="box-container">
-    <div class="box">
-      <h3>Occasio</h3>
-      <p>Your one-stop shop for fresh and organic products.</p>
-    </div>
-    <div class="box">
-      <h3>Quick Links</h3>
-      <a href="e-commerce.html">Home</a>
-      <a href="#">About</a>
-      <a href="#Products">Products</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="box">
-      <h3>Contact Info</h3>
-      <p><i class="fa fa-phone"></i> +91 9876543210</p>
-      <p><i class="fa fa-envelope"></i> support@occasio.com</p>
-      <p><i class="fa fa-map-marker"></i> Hyderabad, India</p>
-    </div>
-  </div>
-  <div class="credit">© 2025 Occasio. All Rights Reserved.</div>
-</footer>
-
-<script>
-  // Dark mode toggle
-  document.getElementById("theme-toggle").addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-    this.textContent = document.body.classList.contains("dark-mode") ? "Disable Dark Mode" : "Enable Dark Mode";
-  });
-
-  // Back to top button
-  const backToTop = document.getElementById("backToTop");
-  window.onscroll = function () {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      backToTop.style.display = "block";
-    } else {
-      backToTop.style.display = "none";
-    }
-  };
-  backToTop.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-
-</body>
-</html>
