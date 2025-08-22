@@ -1,59 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Party wear</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" type="text/css" href="style2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Occasio — Party Wear</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
-<div class="main-content">
-	
-  <header>
-  <h1 class="occasio-heading">
-    <span class="o-letter">O</span>ccasio
-  </h1>
-  <p class="occasio-tagline">Your one stop clothing destination</p>
-  <button id="darkModeToggle" class="button" style="position:absolute; top:20px; right:20px;">🌙 Dark Mode</button>
-</header>
-
-  <button class="button" onclick="location.href='contact.html'">Contact Us</button>
-
-
- <div class="container">
-  <div class="about-card">
-    <div class="about-img">
-      <img src="images/background.png" alt="Occasio" />
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <h1 class="brand"><span class="o-letter">O</span>ccasio</h1>
+      <p class="tagline">Your one-stop clothing destination</p>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="e-commerce.html" aria-current="page">Party Wear</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="darkModeToggle" class="button toggle-btn">🌙 Dark Mode</button>
     </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/background.png" alt="Occasio Collection" />
+    <div class="hero-overlay">
+      <h2>Elevate Your Presence</h2>
+      <p>Timeless elegance with a contemporary edge</p>
+      <a href="page1.html" class="button primary">Shop Now →</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about container">
     <div class="about-content">
       <h3><span class="about-icon">✨</span> About Occasio</h3>
-      <p>At Occasio, fashion isn't just clothing — it's an expression of moments, moods, and milestones.</p>
+      <p>At Occasio, fashion isn’t just clothing — it’s an expression of moments, moods, and milestones.</p>
       <p>We are a modern fashion brand born from the belief that every occasion deserves its own style.</p>
-      <p>Whether it's a casual brunch, a boardroom meeting, or a night under city lights, Occasio crafts versatile 
-        pieces that effortlessly elevate your presence.</p>
-      <p>Our collections blend timeless elegance with contemporary edge, designed for those who value individuality,
-         quality, and confidence. With a focus on premium fabrics, thoughtful details, and sustainable practices, we
-          aim to empower you to dress not just for the day, but for the story you want to tell.</p>
+      <p>Whether it’s a casual brunch, a boardroom meeting, or a night under city lights, Occasio crafts versatile pieces that effortlessly elevate your presence.</p>
+      <p>Our collections blend timeless elegance with contemporary edge, designed for those who value individuality, quality, and confidence. With a focus on premium fabrics, thoughtful details, and sustainable practices, we aim to empower you to dress not just for the day, but for the story you want to tell.</p>
     </div>
-  </div>
-</div>
+  </section>
 
-<div style="text-align:center; margin: 30px 0;">
-    <a href="page1.html" class="button">Shop Now! &rarr;</a>
-	</div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Occasio. All rights reserved.</p>
+    <div class="social">
+      <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+  </footer>
 
+  <script>
+    // Auto-update year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  <footer>
-	<p>&copy; 2023 Occasio. All rights reserved.</p>
-	<p>Follow us on:
-		<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-		<a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-		<a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-	</p>
-</footer>
-</div>
-</script>
+    // Dark mode toggle
+    const toggle = document.getElementById("darkModeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    });
+  </script>
 </body>
+</html>
