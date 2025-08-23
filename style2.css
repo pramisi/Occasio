@@ -273,3 +273,282 @@ body.dark-mode .card .action li i {
 body.dark-mode .card .action li:hover i {
     color: #000000 !important;
 }
+/* =========
+   Global & Header (same as before)
+   ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.o-letter {
+  color: #e63946;
+  font-size: 1.8rem;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 10px;
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: #e63946;
+}
+
+.button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #e63946;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover {
+  background: #c92d3b;
+}
+
+.toggle-btn {
+  background: #444;
+  color: #fff;
+}
+
+.toggle-btn:hover {
+  background: #222;
+}
+
+/* =========
+   Hero Section
+   ========= */
+.hero {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.55);
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  max-width: 400px;
+}
+
+.hero-overlay h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* =========
+   About Section
+   ========= */
+.about {
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.about h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.about p {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* =========
+   Product Grid (used in page1.html)
+   ========= */
+.container {
+  width: 1200px;
+  max-width: 95%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.imgbx {
+  width: 100%;
+  aspect-ratio: 4/3;   /* ensures images don’t blow up */
+  overflow: hidden;
+}
+
+.imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .imgbx img {
+  transform: scale(1.1);
+}
+
+.content {
+  padding: 15px;
+}
+
+.productname h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.price_rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price_rating h2 {
+  font-size: 20px;
+  color: #e63946;
+  font-weight: 500;
+}
+
+.price_rating .fa {
+  color: #ffd513;
+  cursor: pointer;
+}
+
+.price_rating .fa.grey {
+  color: #ccc;
+}
+
+/* =========
+   Footer
+   ========= */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #eee;
+}
+
+.site-footer .social a {
+  margin: 0 8px;
+  color: #eee;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.site-footer .social a:hover {
+  color: #e63946;
+}
+
+/* =========
+   Dark Mode
+   ========= */
+body.dark-mode {
+  background: #121212;
+  color: #ddd;
+}
+
+body.dark-mode .site-header {
+  background: #1e1e1e;
+  border-bottom-color: #333;
+}
+
+body.dark-mode .nav a {
+  color: #ddd;
+}
+
+body.dark-mode .nav a:hover,
+body.dark-mode .nav a[aria-current="page"] {
+  color: #e63946;
+}
+
+body.dark-mode .about {
+  background: #1e1e1e;
+  color: #ccc;
+}
+
+body.dark-mode .card {
+  background: #1e1e1e;
+  color: #ccc;
+}
+
+body.dark-mode .site-footer {
+  background: #000;
+  color: #aaa;
+}

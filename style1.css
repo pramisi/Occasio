@@ -219,11 +219,12 @@ body.dark-mode .navbar a:hover {
 }
 .gallery {
   padding: 1rem 7%;
+   height: 60rem;
 }
 .gallery h1 {
   font-size: 40px;
   text-align: center;
-  padding: 1rem 0;
+  padding: 4rem 0;
 }
 .main-gallery {
   display: flex;
@@ -236,15 +237,36 @@ body.dark-mode .navbar a:hover {
   flex: 1 1 200px;
   padding-left: 0px;
   padding-right: 3px;
+  padding: 0.1rem;
+
 }
 .inner-gallery img {
-  width: 80%;
+  width: 90%;
+  height: 100%;
+  border-radius: 30px;
 }
+
+.h {
+  padding: 0.9rem;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 10px;
+
+}
+
+.h:hover {
+  width: 94%;
+
+}
+
+
+
 #girlimg {
   height: 300px;
   width: 300px;
   border-radius: 30px;
 }
+
 #img1 {
   border-radius: 30px;
 }
@@ -814,3 +836,5 @@ body.dark-mode #backToTop:hover {
         border-top: 1px solid #333 !important;
     }
 }
+
+  }
