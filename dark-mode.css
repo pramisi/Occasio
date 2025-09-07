@@ -14,8 +14,8 @@
 	border-color: #444 !important;
 }
 .dark-mode button, .dark-mode .button {
-	background: #333 !important;
-	color: #f1f1f1 !important;
+	background: #f1f1f1 !important;
+	color:  #333!important;
 	border-color: #444 !important;
 }
 .dark-mode .card, .dark-mode .box, .dark-mode .container, .dark-mode .main-background, .dark-mode .main-content {
