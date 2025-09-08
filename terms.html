@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occasio — Terms of Service</title>
+    <style>
+        /* Terms of Service Specific Styles */
+        :root {
+            --tos-primary: #4a3c47;
+            --tos-secondary: #c8a8b8;
+            --tos-light: #f8f5f7;
+            --tos-dark: #322831;
+            --tos-accent: #7a5c6e;
+        }
+
+        body.tos-page {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            color: var(--tos-dark);
+            background-color: var(--tos-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        .tos-header {
+            background: linear-gradient(135deg, var(--tos-primary), var(--tos-dark));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tos-header::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: var(--tos-light);
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+
+        .tos-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tos-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tos-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tos-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            counter-increment: section-counter;
+        }
+
+        .tos-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .tos-section h2 {
+            color: var(--tos-primary);
+            border-bottom: 2px solid var(--tos-secondary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .tos-section h2::before {
+            content: counter(section-counter) ".";
+            color: var(--tos-accent);
+            margin-right: 0.8rem;
+            font-weight: 700;
+        }
+
+        .tos-section h3 {
+            color: var(--tos-accent);
+            margin-top: 1.8rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .tos-section p, .tos-section ul, .tos-section ol {
+            margin-bottom: 1.2rem;
+        }
+
+        .tos-section ul, .tos-section ol {
+            padding-left: 1.8rem;
+        }
+
+        .tos-section li {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+
+        .tos-section ul li::before {
+            content: "•";
+            color: var(--tos-secondary);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .tos-section ol {
+            counter-reset: item;
+        }
+
+        .tos-section ol li {
+            counter-increment: item;
+        }
+
+        .tos-section ol li::before {
+            content: counter(item) ".";
+            color: var(--tos-accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5em;
+            margin-left: -1.5em;
+        }
+
+        .important-note {
+            background-color: rgba(202, 168, 184, 0.1);
+            border-left: 4px solid var(--tos-accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .tos-contact {
+            background: linear-gradient(135deg, var(--tos-secondary), var(--tos-primary));
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .tos-contact a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .tos-contact a:hover {
+            text-decoration: none;
+        }
+
+        .tos-footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--tos-dark);
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--tos-secondary);
+            text-align: right;
+            margin-top: -1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .tos-header h1 {
+                font-size: 2rem;
+            }
+            
+            .tos-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="tos-page">
+    <header class="tos-header">
+        <h1>Terms of Service</h1>
+        <p>Please read these terms carefully before using Occasio's website or services.</p>
+    </header>
+
+    <div class="tos-container">
+        <p class="last-updated">Last Updated: August 14, 2025</p>
+
+        <section class="tos-section">
+            <h2>Introduction</h2>
+            <p>These Terms of Service ("Terms") govern your access to and use of the Occasio website (the "Site") and any products or services purchased through the Site. By accessing or using our Site, you agree to be bound by these Terms.</p>
+            
+            <div class="important-note">
+                If you do not agree to these Terms, you may not access or use the Site or purchase products through the Site.
+            </div>
+        </section>
+
+        <section class="tos-section">
+            <h2>Eligibility</h2>
+            <p>To use our Site and services, you must:</p>
+            <ul>
+                <li>Be at least 16 years of age</li>
+                <li>Have the legal capacity to enter into a binding contract</li>
+                <li>Not be prohibited from receiving our products or services under applicable laws</li>
+            </ul>
+        </section>
+
+        <section class="tos-section">
+            <h2>Account Registration</h2>
+            <p>To access certain features, you may need to register an account. You agree to:</p>
+            <ol>
+                <li>Provide accurate and complete registration information</li>
+                <li>Maintain the security of your password</li>
+                <li>Promptly update any changes to your information</li>
+                <li>Accept responsibility for all activities under your account</li>
+            </ol>
+        </section>
+
+        <section class="tos-section">
+            <h2>Products and Purchases</h2>
+            <h3>Product Descriptions</h3>
+            <p>We strive to accurately display our products, but colors and details may vary based on your device. All products are subject to availability.</p>
+            
+            <h3>Pricing</h3>
+            <p>Prices are shown in your local currency and are subject to change without notice. We reserve the right to limit quantities and correct pricing errors.</p>
+            
+            <h3>Payment</h3>
+            <p>We accept various payment methods as displayed at checkout. You represent that you have the legal right to use any payment method you provide.</p>
+        </section>
+
+        <section class="tos-section">
+            <h2>Shipping and Returns</h2>
+            <p>Please review our <a href="#" style="color: var(--tos-accent);">Shipping Policy</a> and <a href="#" style="color: var(--tos-accent);">Return Policy</a> for detailed information about:</p>
+            <ul>
+                <li>Shipping timelines and costs</li>
+                <li>International shipping restrictions</li>
+                <li>Return eligibility and processes</li>
+                <li>Refund timelines</li>
+            </ul>
+        </section>
+
+        <section class="tos-section">
+            <h2>Intellectual Property</h2>
+            <p>All content on this Site, including designs, text, graphics, logos, and images, is the property of Occasio or its licensors and is protected by intellectual property laws.</p>
+            <p>You may not:</p>
+            <ol>
+                <li>Reproduce, distribute, or create derivative works without permission</li>
+                <li>Use our trademarks without express written consent</li>
+                <li>Use any automated systems to access or scrape the Site</li>
+            </ol>
+        </section>
+
+        <section class="tos-section">
+            <h2>User Conduct</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the Site for any unlawful purpose</li>
+                <li>Post false, misleading, or harmful content</li>
+                <li>Interfere with the Site's operation or security</li>
+                <li>Harass other users or Occasio personnel</li>
+                <li>Attempt to gain unauthorized access to our systems</li>
+            </ul>
+        </section>
+
+        <section class="tos-section">
+            <h2>Termination</h2>
+            <p>We may terminate or suspend your access to the Site immediately, without prior notice, for any reason, including if you breach these Terms.</p>
+        </section>
+
+        <section class="tos-section">
+            <h2>Disclaimers</h2>
+            <p>THE SITE AND PRODUCTS ARE PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND. OCCASIO DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+        </section>
+
+        <section class="tos-section">
+            <h2>Limitation of Liability</h2>
+            <p>IN NO EVENT SHALL OCCASIO BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING FROM YOUR USE OF THE SITE OR PRODUCTS.</p>
+            <p>OUR TOTAL LIABILITY FOR ANY CLAIMS RELATED TO THE SITE OR PRODUCTS SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE PRODUCTS AT ISSUE.</p>
+        </section>
+
+        <section class="tos-section">
+            <h2>Governing Law</h2>
+            <p>These Terms shall be governed by the laws of the State of New York without regard to its conflict of law provisions.</p>
+        </section>
+
+        <section class="tos-section">
+            <h2>Changes to Terms</h2>
+            <p>We may modify these Terms at any time. The updated version will be posted on this page with a new "Last Updated" date. Your continued use of the Site constitutes acceptance of the updated Terms.</p>
+        </section>
+
+        <section class="tos-contact">
+            <h2>Contact Information</h2>
+            <p>For questions about these Terms, please contact us:</p>
+            <p>Email: <a href="mailto:legal@occasio-fashion.com">legal@occasio-fashion.com</a></p>
+            <p>Mailing Address: Occasio Legal Department, 123 Style Avenue, Fashion District, NY 10001</p>
+        </section>
+    </div>
+
+    <footer class="tos-footer">
+        <p>&copy; 2025 Occasio. All rights reserved. | <a href="./index.html" style="color: var(--tos-secondary);">Return to Homepage</a> | <a href="./privacy.html" style="color: var(--tos-secondary);">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
