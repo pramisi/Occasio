@@ -84,7 +84,78 @@
 
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <div class="faq-section">
+    <div class="container">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What is Occasio?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Occasio is a comprehensive platform that provides various services and solutions to help you achieve your goals. We offer a wide range of features and tools designed to make your experience seamless and efficient.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How can I get started?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Getting started is easy! Simply create an account, explore our features, and begin using our services. You can also contact our support team for personalized assistance.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is there a free trial available?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we offer a free trial period for new users. This allows you to explore our platform and features before committing to a paid plan. Contact us for more details about trial availability.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What payment methods do you accept?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We accept all major credit cards, PayPal, and bank transfers. All transactions are secure and encrypted to ensure your financial information is protected.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How can I contact customer support?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>You can reach our customer support team through the contact form on this page, email us at lorem@ipsum.com, or call us at +918451212157. We typically respond within 24 hours.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you offer refunds?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we offer a 30-day money-back guarantee for all our services. If you're not satisfied with your experience, you can request a full refund within 30 days of your purchase.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
         
 </body>
 </section>
@@ -114,5 +185,40 @@ themeToggle.addEventListener('click', () => {
   const isDark = document.body.classList.toggle(darkClass);
   localStorage.setItem('darkMode', isDark);
   setDarkMode(isDark);
+});
+
+// FAQ Accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.faq-icon');
+    
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all other FAQ items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          otherItem.querySelector('.faq-answer').style.maxHeight = null;
+          otherItem.querySelector('.faq-icon').textContent = '+';
+        }
+      });
+      
+      // Toggle current item
+      if (isActive) {
+        item.classList.remove('active');
+        answer.style.maxHeight = null;
+        icon.textContent = '+';
+      } else {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        icon.textContent = '−';
+      }
+    });
+  });
 });
 </script>
