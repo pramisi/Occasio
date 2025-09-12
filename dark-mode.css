@@ -1,0 +1,33 @@
+/* Dark mode styles */
+.dark-mode, .dark-mode body {
+	background-color: #181818 !important;
+	color: #f1f1f1 !important;
+}
+.dark-mode a { color: #8ab4f8 !important; }
+.dark-mode header, .dark-mode nav, .dark-mode footer, .dark-mode .header, .dark-mode .navbar {
+	background: #232323 !important;
+	color: #f1f1f1 !important;
+}
+.dark-mode input, .dark-mode textarea, .dark-mode select {
+	background: #232323 !important;
+	color: #f1f1f1 !important;
+	border-color: #444 !important;
+}
+.dark-mode button, .dark-mode .button {
+	background: #f1f1f1 !important;
+	color:  #333!important;
+	border-color: #444 !important;
+}
+.dark-mode .card, .dark-mode .box, .dark-mode .container, .dark-mode .main-background, .dark-mode .main-content {
+	background: #232323 !important;
+	color: #f1f1f1 !important;
+}
+.dark-mode .occasio-heading, .dark-mode .occasio-tagline {
+	color: #f1f1f1 !important;
+}
+.dark-mode .theme-toggle {
+	background: #232323 !important;
+	color: #f1f1f1 !important;
+	border-color: #f1f1f1 !important;
+}
+/* Add more selectors as needed for your site */

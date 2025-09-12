@@ -1,84 +1,641 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Contact us</title>
-	
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
 
-</html>
-<body>
-  <section>
-    <div class="contact-us-section">
-      <div class="contactinfo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+    <style>
+      /* Dark mode styles */
+      .dark-mode, .dark-mode body {
+        background-color: #181818 !important;
+        color: #f1f1f1 !important;
+      }
+
+      .dark-mode a {
+        color: #8ab4f8 !important;
+      }
+
+      .dark-mode header,
+      .dark-mode nav,
+      .dark-mode footer,
+      .dark-mode .header,
+      .dark-mode .navbar {
+        background: #232323 !important;
+        color: #f1f1f1 !important;
+      }
+
+      .dark-mode input,
+      .dark-mode textarea,
+      .dark-mode select {
+        background: #232323 !important;
+        color: #f1f1f1 !important;
+        border-color: #444 !important;
+      }
+
+      .dark-mode button,
+      .dark-mode .button {
+        background: #f1f1f1 !important;
+        color: #333 !important;
+        border-color: #444 !important;
+      }
+
+      .dark-mode .card,
+      .dark-mode .box,
+      .dark-mode .container,
+      .dark-mode .main-background,
+      .dark-mode .main-content {
+        background: #232323 !important;
+        color: #f1f1f1 !important;
+      }
+
+      .dark-mode .occasio-heading,
+      .dark-mode .occasio-tagline {
+        color: #f1f1f1 !important;
+      }
+
+      .dark-mode .theme-toggle {
+        color: #f1f1f1 !important;
+        border-color: #f1f1f1 !important;
+        background: transparent !important;
+      }
+
+      /* Specific overrides for contact form in dark mode */
+      .dark-mode .formBox input,
+      .dark-mode .formBox textarea {
+        background: #232323 !important;
+        color: #f1f1f1 !important;
+        border: 1px solid #777 !important;
+      }
+
+      .dark-mode .formBox input::placeholder,
+      .dark-mode .formBox text::placeholder {
+        color: #aaa !important;
+      }
+
+      .dark-mode .formBox input[type="submit"] {
+        background-color: #0b0b0b !important;
+        color: #f5f5f5 !important;
+        border: 1px solid #777 !important;
+        cursor: pointer;
+      }
+
+      .dark-mode .formBox input[type="submit"]:hover {
+        background-color: #555 !important;
+      }
+
+      /* Main styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: #012041;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .home-btn {
+        text-decoration: none;
+        font-size: 1.2em;
+        color: white;
+        font-weight: bold;
+      }
+
+      .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.8em;
+        color: white;
+        display: flex; /* Ensure proper alignment */
+        align-items: center;
+      }
+
+      .theme-toggle i {
+        transition: transform 0.3s ease;
+        color: white !important; /* Always visible */
+      }
+
+      section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #112d42;
+      }
+      
+      section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: #03a9f4;
+      }
+      
+      section .contact-us-section {
+        position: relative;
+        min-width: 1100px;
+        min-height: 550px;
+        display: flex;
+        z-index: 1000;
+      }
+      
+      section .contact-us-section .contactinfo {
+        position: absolute;
+        top: 40px;
+        width: 350px;
+        height: calc(100% - 80px);
+        background: #0f3959;
+        z-index: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 20px 20px rgba(0,0,0, 0.2);
+      }
+      
+      section .contact-us-section .contactinfo h2 {
+        color: #fff;
+        font-size: 26px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      
+      section .contact-us-section .contactinfo .info {
+        position: relative;
+        margin: 20px 0;
+      }
+      
+      .contactinfo .box {
+        display: flex;
+        align-items: center; /* vertical alignment */
+        margin: 15px 0;
+      }
+
+      .contactinfo .box .icon {
+        min-width: 30px;
+        height: 30px;
+        background: #fff;
+        color: #0f3959;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 20px;
+        margin-right: 15px;
+      }
+
+      .contactinfo .box .text {
+        color: #fff; /* now white */
+        font-size: 16px;
+        align-items: center;
+      }
+
+      .social-icons {
+        margin-top: 30px; 
+      }
+
+      .social-icons a {
+        display: inline-block;
+        width: 30px; /* square size */
+        height: 30px;
+        line-height: 30px; /* center icon vertically */
+        border: 2px solid #fff; /* border color */
+        margin: 0 8px;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+
+      .social-icons a:hover {
+        color: #00bcd4; /* hover color */
+        transform: scale(1.2);
+      }
+      
+      section .contact-us-section .contactForm {
+        position: absolute;
+        padding: 70px 50px;
+        background: #fff;
+        margin-left: 150px;
+        padding-left: 250px;
+        width: calc(100% - 150px);
+        height: 100%;
+        box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+      }
+      
+      section .contact-us-section .contactForm h2 {
+        color: #0f3959;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      
+      section .contact-us-section .contactForm .formBox {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 30px;
+      }
+      
+      section .contact-us-section .contactForm .formBox .inputBox {
+        position: relative;
+        margin: 0 0 35px 0;
+      }
+      
+      section .contact-us-section .contactForm .formBox .inputBox.w50 {
+        width: 47%;
+      }
+      
+      section .contact-us-section .contactForm .formBox .inputBox.w100 {
+        width: 100%;
+      }
+      
+      section .contact-us-section .contactForm .formBox .inputBox input,
+      section .contact-us-section .contactForm .formBox .inputBox textarea {
+        width: 100% !important;
+        padding: 5px 0;
+        resize: none;
+        font-size: 18px;
+        font-weight: 300;
+        color: #333;
+        border: none;
+        border-bottom: 1px solid #777;
+        outline: none;
+        background: transparent;
+      }
+      
+      section .contact-us-section .contactForm .formBox .inputBox textarea {
+        min-height: 120px;
+      }
+      
+      section .contact-us-section .contactForm .formBox .inputBox span {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        font-size: 18px;
+        font-weight: 300;
+        color: #333;
+        transition: 0.5s;
+        pointer-events: none;
+        top: 0;
+      }
+      
+      section .contact-us-section .contactForm .formBox .inputBox input:focus ~ span,
+      section .contact-us-section .contactForm .formBox .inputBox textarea:focus ~ span,
+      section .contact-us-section .contactForm .formBox .inputBox input:valid ~ span,
+      section .contact-us-section .contactForm .formBox .inputBox textarea:valid ~ span {
+        transform: translateY(-20px);
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #ff568c;
+      }
+      
+      section .contact-us-section .contactForm .formBox .inputBox input[type="submit"] {
+        position: relative;
+        cursor: pointer;
+        background: #0f3959;
+        color: #fff;
+        border: none;
+        max-width: 150px;
+        padding: 12px;
+      }
+      
+      section .contact-us-section .contactForm .formBox .inputBox input[type="submit"]:hover {
+        background: #ff568c;
+      }
+      
+      /* Dark mode specific styles */
+      .dark-mode section {
+        background: #181818 !important;
+      }
+      
+      .dark-mode section::before {
+        background: #02577a !important;
+      }
+      
+      .dark-mode .contactForm {
+        background: #232323 !important;
+      }
+      
+      .dark-mode .contactForm h2 {
+        color: #f1f1f1 !important;
+      }
+      
+      .dark-mode .inputBox span {
+        color: #f1f1f1 !important;
+      }
+      
+      .dark-mode .inputBox input,
+      .dark-mode .inputBox textarea {
+        color: #f1f1f1 !important;
+        border-bottom: 1px solid #777 !important;
+      }
+      
+      /* Fix for label overlapping issue in dark mode */
+      .dark-mode .inputBox input:focus ~ span,
+      .dark-mode .inputBox textarea:focus ~ span,
+      .dark-mode .inputBox input:valid ~ span,
+      .dark-mode .inputBox textarea:valid ~ span {
+        transform: translateY(-20px) !important;
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        letter-spacing: 1px !important;
+        color: #ff568c !important;
+      }
+
+      .dark-mode .theme-toggle i {
+        transition: transform 0.3s ease;
+        color: white !important; /* Always visible */
+      }
+      
+      .rotate {
+        animation: rotate 0.3s ease;
+      }
+      
+      @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 1200px) {
+        section .contact-us-section {
+          min-width: 90%;
+          flex-direction: column;
+        }
         
-        <div >
-              <h2>Contact Info</h2>
-          
-              <div class="box">
-                <div class="icon">  <i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                <div class="text">
-                <p>Gurgugram,Haryana</p>
-                </div>
-              </div>
+        section .contact-us-section .contactinfo {
+          position: relative;
+          width: 100%;
+          height: auto;
+          top: 0;
+        }
+        
+        section .contact-us-section .contactForm {
+          position: relative;
+          width: 100%;
+          margin-left: 0;
+          padding: 30px;
+          padding-top: 70px;
+        }
+      }
+      
+      @media (max-width: 600px) {
+        section .contact-us-section .contactForm .formBox .inputBox.w50 {
+          width: 100%;
+        }
+        
+        .top-bar {
+          padding: 10px 15px;
+        }
+      }
+      /* Dark mode form container */
+.dark-mode .contactForm {
+    background-color: #1c1c1c; /* dark form background */
+    color: #f1f1f1;
+}
 
-             <div class="box">
-                <div class="icon"> <i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-                <div class="text">
-                <p>lorem@ipsum.com </p>
-                </div>
+.dark-mode .contactForm .formBox .inputBox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.dark-mode .contactForm .formBox .inputBox input,
+.dark-mode .contactForm .formBox .inputBox textarea {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #f1f1f1;
+    border: 1px solid #555;
+    border-radius: 5px;
+    outline: none;
+}
+
+.dark-mode .contactForm .formBox .inputBox span {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 0 5px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* Move the span above input when focused or has value */
+.dark-mode .contactForm .formBox .inputBox input:focus + span,
+.dark-mode .contactForm .formBox .inputBox input:not(:placeholder-shown) + span,
+.dark-mode .contactForm .formBox .inputBox textarea:focus + span,
+.dark-mode .contactForm .formBox .inputBox textarea:not(:placeholder-shown) + span {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #f1f1f1;
+    background-color: #1c1c1c;
+}
+/* Light mode (default) */
+.theme-toggle {
+  background-color: #0a0a0a;
+  color: #f6f5f5;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode */
+.dark-mode .theme-toggle {
+  color: #f1f1f1;         /* icon visible */
+}
+.theme-toggle {
+  position: relative;
+  z-index: 1000;
+}
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+  transition: color 0.3s ease, transform 0.3s ease;
+  color: #fff; /* default light mode icon color */
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease;
+  color: inherit; /* inherit from button color */
+}
+
+/* Dark mode overrides */
+.dark-mode .theme-toggle {
+  color: #f1f1f1;
+}
+
+/* Rotation animation */
+.rotate {
+  animation: rotate 0.3s ease;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <a href="index.html" class="home-btn"><i class="fa fa-home"></i> Home</a>
+      <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+        <i class="bi bi-brightness-high-fill" id="themeIcon"></i>
+      </button>
+    </div>
+
+    <section>
+      <div class="contact-us-section">
+        <div class="contactinfo">
+
+          <div>
+            <h2>Contact Info</h2>
+
+            <div class="box">
+              <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+              <div class="text">
+                <p>Gurgugram, Haryana</p>
               </div>
-             <div class="box">
-                <div class="icon">  <i class="fa fa-phone" aria-hidden="true"></i></div>
-                <div class="text">
-                <p>+918451212157</p>
-                </div>
-              </div>
-         
             </div>
 
+            <div class="box">
+              <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+              <div class="text">
+                <p>lorem@ipsum.com</p>
+              </div>
+            </div>
 
-             <!-- Social Media Icons -->
-       <div class="social-icons">
-          <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-          <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-          <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-          <a href="#" target="_blank"><i class="fa fa-github"></i></a>
-       </div>
-         
-      </div>
-      <div class="contactForm">
-        <h2>Send a Message</h2>
-        <div class="formBox">
-          <div class="inputBox w50">
-            <input type="text" name="" required>
-            <span>First Name</span>
+            <div class="box">
+              <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+              <div class="text">
+                <p>+918451212157</p>
+              </div>
+            </div>
 
-          </div>
-          <div class="inputBox w50">
-            <input type="text" name="" required>
-            <span>Last Name</span>
-          </div>
-          <div class="inputBox w50">
-            <input type="text" name="" required>
-            <span>Email Address</span>
+            <div class="social-icons">
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
 
-          </div>
-          <div class="inputBox w50">
-            <input type="text" name="" required>
-            <span>Mobile Number</span>
-          </div>
-          <div class="inputBox w100">
-            <textarea name="" required></textarea>
-            <span>Write your message here....</span>
-          </div>
-          <div class="inputBox w100">
-            <input type="submit" value="Send">
           </div>
 
         </div>
+
+        <div class="contactForm">
+          <h2>Send a Message</h2>
+          <div class="formBox">
+            <div class="inputBox w50">
+              <input type="text" name="firstName" required>
+              <span>First Name</span>
+            </div>
+            <div class="inputBox w50">
+              <input type="text" name="lastName" required>
+              <span>Last Name</span>
+            </div>
+            <div class="inputBox w50">
+              <input type="email" name="email" required>
+              <span>Email Address</span>
+            </div>
+            <div class="inputBox w50">
+              <input type="tel" name="phone" required>
+              <span>Mobile Number</span>
+            </div>
+            <div class="inputBox w100">
+              <textarea name="message" required></textarea>
+              <span>Write your message here....</span>
+            </div>
+            <div class="inputBox w100">
+              <input type="submit" value="Send">
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
-        
-</body>
+
+    <script>
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const darkClass = 'dark-mode';
+
+      function setDarkMode(enabled) {
+  if (enabled) {
+    document.body.classList.add(darkClass);
+    themeIcon.className = 'bi bi-brightness-high-fill';
+  } else {
+    document.body.classList.remove(darkClass);
+    themeIcon.className = 'bi bi-moon-fill';
+  }
+}
+
+
+      // Check for saved theme preference or respect the browser preference
+      const savedDarkMode = localStorage.getItem('darkMode');
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      // Set initial theme
+      if (savedDarkMode === 'true' || (savedDarkMode === null && prefersDarkScheme.matches)) {
+        setDarkMode(true);
+      } else {
+        setDarkMode(false);
+      }
+
+      themeToggle.addEventListener('click', () => {
+        const isCurrentlyDark = document.body.classList.contains(darkClass);
+        const isDark = !isCurrentlyDark;
+
+        localStorage.setItem('darkMode', isDark);
+        themeIcon.classList.add('rotate');
+
+        setTimeout(() => {
+          setDarkMode(isDark);
+          themeIcon.classList.remove('rotate');
+        }, 300);
+      });
+    </script>
+  </body>
+</html>
