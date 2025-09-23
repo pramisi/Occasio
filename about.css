@@ -1,205 +1,253 @@
-/* About Page - Premium Styling */
-#about-cont {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-    font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
-    color: #2d2d2d;
-    line-height: 1.8;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  .about-start h1 {
-    font-size: 5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #1a1a1a;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-    background: linear-gradient(45deg, #6e45e2, #88d3ce);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    padding-bottom: 1rem;
+/* Featured Products Section Styles */
+.card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.imgbx {
     position: relative;
-  }
-  
-  .about-start h1::after {
-    content: '';
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .product-image {
+    transform: scale(1.1);
+}
+
+.image-overlay {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, #6e45e2, #88d3ce);
-    border-radius: 2px;
-  }
-  
-  .welcome p {
-    font-size: 1.7rem;
-    margin: 0 auto 3rem;
-    text-align: center;
-    max-width: 800px;
-    color: #444;
-    font-weight: 400;
-  }
-  
-  .choose, .mission {
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    margin: 3rem 0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .choose:hover, .mission:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-  }
-  
-  .choose h2, .mission h2 {
-    font-size: 2.7rem;
-    margin-bottom: 2rem;
-    color: #333;
-    text-align: center;
-    font-weight: 600;
-    position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 1rem;
-  }
-  
-  .choose h2::after, .mission h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
-    border-radius: 3px;
-  }
-  
-  .choose h3 {
-    font-size: 2rem;
-    margin: 2.5rem 0 1.5rem;
-    color: #3a3a3a;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-weight: 500;
-  }
-  
-  .choose p {
-    font-size: 1.7rem;
-    margin-bottom: 2rem;
-    padding-left: 2.5rem;
-    color: #555;
-  }
-  
-  .choose ul {
-    margin: 1.5rem 0 2.5rem 2.5rem;
-    padding-left: 1rem;
-    list-style-type: none;
-  }
-  
-  .choose li {
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.8rem 1rem;
-    background: rgba(110, 69, 226, 0.05);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .choose li:hover {
-    background: rgba(110, 69, 226, 0.1);
-    transform: translateX(5px);
-  }
-  
-  .mission p {
-    font-size: 1.7rem;
-    margin-bottom: 1.5rem;
-    padding-left: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
-  }
-  
-  .mission p::before {
-    content: "✓";
-    color: white;
-    background: #6e45e2;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .image-overlay {
+    opacity: 1;
+}
+
+.action {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.action li {
+    background: #ffd700;
+    color: #232323;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.action li:hover {
+    transform: scale(1.2);
+}
+
+.action span {
+    display: none;
+}
+
+.content {
+    padding: 15px;
+    text-align: center;
+}
+
+.productname h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.price_rating h2 {
+    font-size: 1.3rem;
+    color: #232323;
+    margin: 5px 0;
+}
+
+.dark-mode .price_rating h2 {
+    color: #f3f3f3;
+}
+
+.rating {
+    color: #ffd700;
     font-size: 1rem;
-    flex-shrink: 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 992px) {
-    .about-start h1 {
-      font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
     }
-  }
-  
-  @media (max-width: 768px) {
-    #about-cont {
-      padding: 0 1.5rem;
-      margin: 3rem auto;
+
+    .imgbx {
+        height: 200px;
     }
-    
-    .about-start h1 {
-      font-size: 2.5rem;
+
+    .product-image {
+        height: 100%;
+        object-fit: cover;
     }
-    
-    .welcome p {
-      font-size: 1.3rem;
+}
+
+/* Our Mission Section Styles */
+.mission {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f3f3f3 0%, #ffffff 100%), url('images/mission-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.dark-mode .mission {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1c1c1c 100%), url('images/mission-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: #f3f3f3;
+}
+
+.mission-title {
+    font-size: 2.4rem;
+    color: #232323;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.dark-mode .mission-title {
+    color: #ffd700;
+}
+
+.mission-subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.dark-mode .mission-subtitle {
+    color: #a0a0a0;
+}
+
+.mission-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.mission-card {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-mode .mission-card {
+    background: rgba(50, 50, 50, 0.9);
+}
+
+.mission-card h3 {
+    font-size: 1.4rem;
+    color: #232323;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .mission-card h3 {
+    color: #ffd700;
+}
+
+.mission-card .card-detail {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.dark-mode .mission-card .card-detail {
+    color: #ccc;
+}
+
+.mission-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mission-card:hover .card-detail {
+    max-height: 100px;
+    opacity: 1;
+}
+
+.mission-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffd700;
+    color: #232323;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.mission-link:hover {
+    background: #d9b300;
+    transform: translateY(-2px);
+}
+
+.dark-mode .mission-link {
+    color: #232323;
+}
+
+@media (max-width: 768px) {
+    .mission {
+        padding: 20px;
+        margin: 30px auto;
     }
-    
-    .choose, .mission {
-      padding: 2.5rem;
+
+    .mission-title {
+        font-size: 2rem;
     }
-    
-    .choose h2, .mission h2 {
-      font-size: 2rem;
+
+    .mission-subtitle {
+        font-size: 1.1rem;
     }
-  }
-  
-  @media (max-width: 576px) {
-    .about-start h1 {
-      font-size: 2.2rem;
+
+    .mission-cards {
+        grid-template-columns: 1fr;
     }
-    
-    .choose, .mission {
-      padding: 2rem 1.5rem;
+
+    .mission-card {
+        padding: 15px;
     }
-    
-    .choose h3 {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-    
-    .choose li {
-      font-size: 1.1rem;
-    }
-    
-    .mission p {
-      font-size: 1.2rem;
-    }
-  }
+}
