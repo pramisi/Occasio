@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
+  background: linear-gradient(135deg, #ff007f, #8900ff);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -19,26 +19,32 @@ body {
   flex-wrap: wrap;
   width: 100%;
   max-width: 1100px;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
   overflow: hidden;
+  
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .contactinfo {
   flex: 1;
-  background-color: #0f3959;
+  background-color: transparent;
   color: #fff;
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-width: 300px;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.1);
 }
 
 .contactinfo h2 {
-  font-size: 26px;
+  font-size: 28px;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .contactinfo .info {
@@ -49,19 +55,15 @@ body {
 .contactinfo .info li {
   display: flex;
   align-items: center;
-  margin: 15px 0;
-  color: #ccc;
-  font-size: 15px;
+  margin: 20px 0;
+  color: #eee;
+  font-size: 16px;
 }
 
 .contactinfo .info li i {
-  margin-right: 12px;
+  margin-right: 15px;
   color: #fff;
-  font-size: 18px;
-  opacity: 0.6;
-}
-
-.contactinfo .info li span {
+  font-size: 20px;
   opacity: 0.8;
 }
 
@@ -73,43 +75,42 @@ body {
   padding-left: 0;
 }
 
-.contactinfo .sci li {
-  margin: 0;
-}
-
 .contactinfo .sci a {
-  color: #ccc;
-  font-size: 18px;
-  transition: 0.3s;
+  color: #fff;
+  font-size: 24px;
+  transition: 0.3s transform;
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .contactinfo .sci a:hover {
-  color: #fff;
+  opacity: 1;
+  transform: translateY(-5px);
 }
 
 .contactForm {
   flex: 2;
   padding: 40px 50px;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .contactForm h2 {
-  color: #0f3959;
-  font-size: 24px;
+  color: #fff;
+  font-size: 26px;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .contactForm p {
-  color: #555;
-  font-size: 14px;
-  margin-bottom: 25px;
+  color: #eee;
+  font-size: 15px;
+  margin-bottom: 30px;
 }
 
 .formBox {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 }
 
 .inputBox {
@@ -126,12 +127,12 @@ body {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #333;
+  color: #fff;
   border: none;
-  border-bottom: 1.5px solid #aaa;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
   background: transparent;
   outline: none;
-  transition: 0.3s;
+  transition: border-color 0.3s;
 }
 
 .inputBox textarea {
@@ -144,9 +145,14 @@ body {
   left: 0;
   top: 10px;
   font-size: 16px;
-  color: #888;
+  color: rgba(255, 255, 255, 0.7);
   transition: 0.3s;
   pointer-events: none;
+}
+
+.inputBox input:focus,
+.inputBox textarea:focus {
+    border-bottom-color: #fff;
 }
 
 .inputBox input:focus ~ span,
@@ -155,56 +161,35 @@ body {
 .inputBox textarea:valid ~ span {
   transform: translateY(-20px);
   font-size: 12px;
-  color: #0072ff;
+  color: #fff;
 }
 
 .inputBox input[type="submit"] {
-  background-color: #0f3959;
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #8900ff;
   border: none;
-  padding: 12px 25px;
+  padding: 12px 30px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
-  border-radius: 5px;
+  transition: all 0.3s;
+  border-radius: 8px;
+  width: auto;
 }
 
 .inputBox input[type="submit"]:hover {
-  background-color: #ff568c;
+  background-color: #fff;
+  color: #ff007f;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Star Rating */
-.star-rating {
-  direction: rtl;
-  font-size: 22px;
-  display: flex;
-  gap: 5px;
-  margin-top: 10px;
-}
-
-.star-rating input {
-  display: none;
-}
-
-.star-rating label {
-  color: #ccc;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.star-rating input:checked ~ label,
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-  color: #ffca08;
-}
-
-/* Responsive */
 @media (max-width: 900px) {
   .contact-us-section {
     flex-direction: column;
   }
-
+  .contactinfo {
+    border-right: none;
+  }
   .contactinfo,
   .contactForm {
     width: 100%;
