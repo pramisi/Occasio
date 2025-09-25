@@ -171,61 +171,21 @@
 </head>
 <body>
 
-	<header id="header" style="width:100%;height:100px; position:fixed; top:0; left:0; background:#fff; color:#232323; display:flex; align-items:center; justify-content:space-between; padding:12px 40px; box-shadow:0 2px 8px rgba(0,0,0,0.3); z-index:1000; font-family:Arial, sans-serif; font-size:1.3em; transition:0.3s;"> 
-
-  <!-- Logo -->
-  <a href="#" id="logo" style="color:#232323; font-size:2em; font-weight:bold; text-decoration:none; letter-spacing:1px; transition:0.3s;">
-    Occasio
-  </a>
-
-  <!-- Navbar Links -->
-  <nav class="navbar" id="navbar" style="display:flex; gap:35px;">
-    <a href="index.html" style="color:#232323; text-decoration:none; font-size:1.2em; transition:0.3s;">Home</a>
-    <a href="#" style="color:#232323; text-decoration:none; font-size:1.2em; transition:0.3s;">About</a>
-    <a href="#Products" style="color:#232323; text-decoration:none; font-size:1.2em; transition:0.3s;">Products</a>
-    <a href="contact.html" style="color:#232323; text-decoration:none; font-size:1.2em; transition:0.3s;">Contact</a>
-  </nav>
-
-  <!-- Icons -->
-  <div class="icons" style="display:flex; align-items:center; gap:25px; font-size:1.5em; cursor:pointer;">
-    <div class="hamburger-icon" style="color:#232323; font-size:1.8em; display:none;">&#9776;</div>
-    <div class="fa fa-shopping-cart" id="shop-cart" style="color:#232323;"></div>
-    <div class="fa fa-search" id="search-bar" style="color:#232323;"></div>
-    
-    <!-- Dark/Light Mode Toggle -->
-    <button id="themeToggle" title="Toggle Dark Mode" 
-      style="background:#232323; color:#fff; border-radius:50%; border:2px solid #232323; width:42px; height:42px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); cursor:pointer; font-size:1.4em; transition:0.3s;">
-      <i class="bi bi-brightness-high-fill" id="themeIcon"></i>
-    </button>
-  </div>
-
-</header>
-
-<script>
-  const toggleBtn = document.getElementById("themeToggle");
-  const header = document.getElementById("header");
-  const links = document.querySelectorAll("#navbar a, #logo, .icons div");
-
-  let darkMode = false;
-
-  toggleBtn.addEventListener("click", () => {
-    darkMode = !darkMode;
-    if (darkMode) {
-      header.style.background = "#232323";
-      header.style.color = "#fff";
-      links.forEach(link => link.style.color = "#fff");
-      toggleBtn.style.background = "#fff";
-      toggleBtn.style.color = "#232323";
-    } else {
-      header.style.background = "#fff";
-      header.style.color = "#232323";
-      links.forEach(link => link.style.color = "#232323");
-      toggleBtn.style.background = "#232323";
-      toggleBtn.style.color = "#fff";
-    }
-  });
-</script>
-
+	<header class="header">
+		<a href="#" id="logo" class="nav-logo">Occasio</a>
+		<nav class="nav-menu" >
+			<a href="e-commerce.html" class="nav-item">Home</a>
+			<a href="#about-cont" class="nav-item">About</a>
+			<a href="#Products" class="nav-item">Products</a>
+			<a href="contact.html" class="nav-item">Contact</a>
+		</nav>
+		   <div class="nav-icons">
+                <button class="hamburger-icon">&#9776;</button>
+                <button class="icon"><i class="fa fa-shopping-cart"></i></button>
+                <button class="icon"><i class="fa fa-search"></i></button>
+                <button class="icon"><i class="bi bi-brightness-high-fill"></i></button>
+            </div>
+	</header>
 
 	<div class="main-background">
 		<div class="left-back"></div>
